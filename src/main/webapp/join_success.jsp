@@ -1,50 +1,47 @@
 <%@page import="com.sm.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-	<head>
-		<title>Forty by HTML5 UP</title>
-		<meta charset="UTF-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		
-	</head>
-	<style>
-		#Update > ul.actions {
-			margin-top:10%;
-		}
-	</style>
-	<body style="text-align: center;">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Menu -->
-					<nav id="Update">	
-						<ul class="actions vertical">
-							<li><h1>환영합니다!</h1></li>
-							<li>회원가입을 축하합니다.</li>
-							<!-- request영역에 저장된 회원정보 중 이메일을 출력하시오. -->
-							<%
-							MemberDTO dto = (MemberDTO)request.getAttribute("member");
-							%>
-							<li>메세지시스템의 새로운 이메일은 ${member.mem_id}입니다.</li>
-							<li>메세지시스템의 새로운 이메일은 <%=dto.getMem_id() %>입니다.</li>
-							<li><button onclick='location.href="main.jsp"'>시작하기</button></li>
-						</ul>
-					</nav>			
-			</div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/joinSuccess.css">
+
+</head>
+
+<body>
+    <div class="menu-bar">
+        <a href="main.html">
+            <img src="./이미지/로고(스마트_바탕).png" class="menu-logo">
+        </a>
+        <a href="studyKorean.html" class="menu-item">공부하러가기</a>
+        <a href="schedule.html" class="menu-item">스케줄관리</a>
+        <a href="comunity.html" class="menu-item">커뮤니티</a>
+        <a href="notice.html" class="menu-item">공지사항</a>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <img src="./이미지/체크.PNG" class="check">
+    <br>
+    <br>
+    <br>
+    <br>
+    <span class="success">OOO님! 회원가입이 완료 되었습니다.</span>
+    <br>
+    <br>
+    <button type="submit" class="submit-button">메인 페이지로</button>
+
+
+</body>
+
 </html>
-
