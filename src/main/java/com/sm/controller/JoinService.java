@@ -40,7 +40,7 @@ public class JoinService extends HttpServlet {
 	if (row > 0) {
 		// request 객체 저장영역
 		request.setAttribute("member", dto);
-		RequestDispatcher rd = request.getRequestDispatcher("join_success.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");
 		rd.forward(request, response);
 	}else {
 		// 6. 실패했다면 main.jsp redirect 방식 이동
