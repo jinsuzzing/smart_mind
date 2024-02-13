@@ -23,7 +23,7 @@
     <div class="image-line"></div>
   </div>
   <div class="smartmind-text">SmartMind</div>
-  <img src="./이미지/로고.png" alt="설명" class="top-left-image">
+  <img src="C:\Users\smhrd\Desktop\미니프로젝트\Jinsu\Project\images\logo.png" alt="설명" class="top-left-image">
 
   <div class="menu-container">
     <ul class="menu-list">

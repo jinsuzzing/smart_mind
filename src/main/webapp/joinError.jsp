@@ -28,7 +28,7 @@
     <br>
     <br>
     <br>
-    <img src="./이미지/오류.PNG" class="check">
+    <img src="/images/smart_image.error.PNG" class="check">
     <br>
     <br>
     <br>
