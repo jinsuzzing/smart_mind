@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+	font-family: 'NPSfontBold';
+}
+a{
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* 버튼들을 수직으로 정렬 */
+    justify-content: center;
+    align-items: center; /* 중앙 정렬 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+.study-button {
+    margin: 10px 20px; /* 버튼 간의 상하 간격을 10px, 좌우 간격을 20px로 설정 */
+    padding: 10px 40px; /* 버튼 내부 여백 */
+    font-size: 25px; /* 글자 크기 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    border-radius: 30px; /* 버튼 모서리 둥글게 */
+    background-color: #aca6a6; /* 기본 버튼 배경색을 회색으로 설정 */
+    border: none; /* 버튼 테두리 제거 */
+    color: white; /* 버튼 글씨색을 흰색으로 변경 */
+    transition: background-color 0.3s; /* 배경색 변경에 대한 전환 효과 설정 */
+}
+
+.study-button:hover {
+    background-color: #D2003F; /* 마우스 오버 시 버튼 배경색 변경 */
+}
+
+
+
+/* 메뉴 바와 제목 사이의 간격 조절 */
+.menu-bar {
+    margin-bottom: 10px; /* 하단 마진 추가로 간격 조절 */
+}
+
+/* 제목 스타일 */
+.title {
+    display: flex; /* Flexbox 레이아웃 사용 */
+    justify-content: space-between; /* 양끝에 위치하도록 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin: 20px 400px 20px 100px; /* 상하 20px, 좌우 40px 마진으로 간격 조절 */
+    padding: auto;
+}
+
+/* 버튼 스타일 */
+.title button {
+    padding: 10px 20px; /* 버튼 내부 패딩 */
+    background-color: #D2003F; /* 배경색 */
+    color: white; /* 글씨 색상 */
+    border: none; /* 테두리 제거 */
+    border-radius: 20px; /* 모서리 둥글게 */
+    cursor: pointer; /* 커서 모양 변경 */
+    font-size: 20px; /* 글씨 크기 */
+    transition: background-color 0.3s; /* 호버 효과를 위한 배경색 전환 */
+}
+
+/* 버튼 호버 효과 */
+.title button:hover {
+    background-color: #f01b5b; /* 호버 시 배경색 변경 */
+}
+
+.subtitle{
+    background-color: #f1eeee;
+    margin: 50px 100px;
+    padding: 30px 80px;
+    border-radius: 20px;
+    color: rgb(84, 82, 82);
+    font-size: 22px;
+}
+/* subtitle 내의 모든 span에 대한 스타일 */
+.subtitle span {
+    display: inline-block; /* 각 span을 인라인-블록 요소로 처리 */
+    margin-right: 1000px; /* 오른쪽 마진으로 간격 추가 */
+}
+
+/* 마지막 span 요소에 대한 마진 제거 */
+.subtitle span:last-child {
+    margin-right: 0; /* 마지막 span 요소의 오른쪽 마진 제거 */
+}
+.course-table{
+    margin: 20px 100px 20px 100px; /* subtitle과의 간격 */
+    text-align: center; /* 텍스트 왼쪽 정렬 */
+    font-size: 20px;
+    border: 2px;
+    border-top: #D2003F;
+}
+.course-table table {
+    width: 100%; /* 테이블의 너비를 부모 요소에 맞춤 */
+    border-collapse: collapse; /* 테이블 셀 사이의 경계선을 하나로 합침 */
+    
+}
+
+.course-table th, .course-table td {
+    border: 1px solid #ddd; /* 셀 경계선 스타일 */
+    padding: 20px 0; /* 셀 내부 여백 */
+    
+}
+
+.course-table th {
+    background-color: #f2f2f2; /* 테이블 헤더 배경색 */
+    color: #D2003F; /* 테이블 헤더 글자색 */
+    border-bottom: 5px solid #000; /* 테이블 헤더 하단 테두리 색상과 두께 조절 */
+}
+
+/* 첫 번째 열(강의 제목)에 대한 스타일 */
+.course-table td:first-child {
+    font-weight: bold; /* 첫 번째 열 글자 굵게 */
+}
+
+/* 테이블의 각 행에 대한 호버 효과 */
+.course-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 수평선만 표시하기 위해 세로선에 대한 스타일 제거 */
+.course-table tr, .course-table th, .course-table td {
+    border: none; /* 세로선 제거 */
+}
+
+/* 가로선만 표시 */
+.course-table tr {
+    border-bottom: 1px solid #ddd; /* 가로선에 대해서만 테두리 적용 */
+}
+
+.course-table table td.setitle{
+    text-align: left;
+    padding-left: 550px;
+}

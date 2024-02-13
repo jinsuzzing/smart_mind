@@ -1,0 +1,164 @@
+       
+       
+@font-face {
+    font-family: 'NPSfontBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+	font-family: 'NPSfontBold';
+}
+       
+       /* 메뉴바 스타일 */
+        .menu-bar {
+            margin-top: 40px;
+            margin-left: 30px;
+            background-color: #D2003F;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            align-items: center;
+        }
+
+        /* 메뉴 항목 스타일 */
+        .menu-item {
+            display: flex;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: x-large;
+            margin-left: 200px;
+            position: relative;
+            margin-right: 20px;
+            cursor: pointer; /* 마우스 오버 시 커서 변경 */
+
+
+        }
+
+        /* 메뉴 항목 호버 효과 */
+        .menu-item:hover {
+            text-decoration: underline;
+        }
+
+        /* 메뉴 로고 스타일 */
+        .menu-logo {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+.button-container {
+    display: flex;
+    flex-direction: row; /* 버튼들을 수직으로 정렬 */
+    justify-content: center;
+    align-items: center; /* 중앙 정렬 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.study-button {
+    margin: 10px 20px; /* 버튼 간의 상하 간격을 10px, 좌우 간격을 20px로 설정 */
+    padding: 10px 40px; /* 버튼 내부 여백 */
+    font-size: 25px; /* 글자 크기 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    border-radius: 30px; /* 버튼 모서리 둥글게 */
+    background-color: #aca6a6; /* 기본 버튼 배경색을 회색으로 설정 */
+    border: none; /* 버튼 테두리 제거 */
+    color: white; /* 버튼 글씨색을 흰색으로 변경 */
+    transition: background-color 0.3s; /* 배경색 변경에 대한 전환 효과 설정 */
+}
+
+.study-button:hover {
+    background-color: #D2003F; /* 마우스 오버 시 버튼 배경색 변경 */
+}
+
+.lecture-container {
+    text-align: left; /* 텍스트 가운데 정렬 */
+    margin-top: 20px; /* 버튼과 강의 목록 사이의 간격 */
+}
+
+.lecture-title {
+    font-size: 24px; /* 제목 글자 크기 */
+    color: #D2003F; /* 제목 글자 색상 */
+    margin-bottom: 15px; /* 제목과 강의 목록 사이의 간격 */
+    justify-content: left;
+    margin-left: 250px;
+}
+
+.lecture-list {
+    display: flex; /* 가로 정렬을 위해 flexbox 사용 */
+    justify-content: center; /* 가운데 정렬 */
+    margin: 10px;
+}
+
+.lecture-item {
+    width: 300px; /* 사각형 너비 */
+    height: 400px; /* 사각형 높이 */
+    background-color: white; /* 사각형 배경 색상 */
+    margin: 10px 30px; /* 사각형 간의 좌우 간격 */
+    line-height: 0px; /* 텍스트를 사각형 중앙에 배치 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    border: 3px solid black; /* 사각형 테두리 */
+}
+
+.lecture-item .lecture-text {
+    padding: 5px; /* 내부 여백을 줄임 */
+    margin-top: 10px; /* 상하 마진 제거 */
+    line-height: 1.2; /* 텍스트 라인 간의 간격 조정 */
+    display: block; /* 각 텍스트를 블록 요소로 처리 */
+    color: #767676;
+    font-size: 16px;
+}
+
+.lecture-list .lecture-item:nth-child(1) .lecture-text:nth-child(3) {
+    font-weight: bold; /* 글자 굵게 */
+    color: #D2003F; /* 글자 색상 변경 */
+    font-size: 20px;
+}
+
+.lecture-list .lecture-item:nth-child(2) .lecture-text:nth-child(3) {
+    font-weight: bold; /* 글자 굵게 */
+    color: #D2003F; /* 글자 색상 변경 */
+    font-size: 20px;
+}
+.lecture-list .lecture-item:nth-child(3) .lecture-text:nth-child(3) {
+    font-weight: bold; /* 글자 굵게 */
+    color: #D2003F; /* 글자 색상 변경 */
+    font-size: 20px;
+}
+.lecture-list .lecture-item:nth-child(4) .lecture-text:nth-child(3) {
+    font-weight: bold; /* 글자 굵게 */
+    color: #D2003F; /* 글자 색상 변경 */
+    font-size: 20px;
+}
+
+.lecture-item img {
+    width: 300px; /* 이미지의 너비 */
+    height: 200px; /* 이미지의 높이를 자동으로 조절하여 비율을 유지 */
+    display: block; /* 이미지를 블록 레벨 요소로 만들어 줄 바꿈 */
+    margin: 0 auto 30px; /* 이미지를 수평 중앙에 배치하고, 하단에 20px 마진 추가 */
+}
+
+.start-study-container {
+    display: flex;
+    flex-direction: row; /* 버튼들을 가로로 정렬 */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 세로 방향에서 가운데 정렬 */
+    padding: 0px;
+}
+
+.start-study-button {
+    margin: 5px 100px; /* 상하 마진을 10px, 좌우 마진을 50px로 조절 */
+    padding: 10px 20px; /* 내부 여백 */
+    font-size: 22px; /* 글자 크기 */
+    background-color: #D2003F; /* 배경색 */
+    color: white; /* 글씨색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 30px; /* 모서리 둥글게 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    transition: background-color 0.3s; /* 배경색 변경 효과 */
+}
+
+.start-study-button:hover {
+    background-color: #f47171; /* 마우스 오버 시 배경색 변경 */
+}
