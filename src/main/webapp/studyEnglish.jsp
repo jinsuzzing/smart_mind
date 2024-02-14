@@ -1,0 +1,117 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Page</title>
+    <link rel="stylesheet" href="assets/css/studyKorean.css"> <!-- CSS 파일 연결 -->
+</head>
+
+<body>
+    <div class="menu-bar">
+        <a href="main.html">
+            <img src="./이미지/로고(스마트_바탕).png" class="menu-logo">
+        </a>
+        <a href="studyKorean.html" class="menu-item">공부하러가기</a>
+        <a href="schedule.html" class="menu-item">스케줄관리</a>
+        <a href="comunity.html" class="menu-item">커뮤니티</a>
+        <a href="notice.html" class="menu-item">공지사항</a>
+    </div>
+    <div class="button-container">
+        <a href="studyKorean.html" class="study-button">국어</a>
+        <a href="studyEnglish.html" class="study-button">영어</a>
+        <a href="studyMath.html" class="study-button">수학</a>
+        <a href="studyScience.html" class="study-button">과학</a>
+    </div>
+    <div class="lecture-container">
+        <h2 class="lecture-title">■ 강의 목록</h2>
+        <div class="lecture-list">
+            <div class="lecture-item">
+                    <img
+                    src="https://educator.edunet.net/pluginfile.php/581541/course/overviewfiles/%EC%8D%B8%EB%84%A4%EC%9D%BC_10%EC%9B%94(2022).png"><br>
+                <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                <span class="lecture-text">등록일 : 2024.03.03</span><br>
+                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">조회수 : 57</span>
+            </div>
+            <div class="lecture-item">
+                    <img
+                    src="https://lh5.googleusercontent.com/proxy/qByC_zAG18U-XFQlejGFppG533FkLgBBvJZcdc0V_Hp5sSxly183mSjnbnr0GKd2bLTLZCIceWxSSmD4qKd9kxZpBiC-kFE5GlbejA6LW2lW5fD2F7QRlTH1ejJEYOzMQmARvKpmfkVb4jB-M3g3UtYivA4KFW1qy9doF1wgkBMnPXWLe8EFnWUC2iNfOH7E9w8dYgtv5RsrxpH5syCu8PlsgfPaSc8VEUVEZT2XvTYX65gj46MSt4rdvFLD5fE88KM"><br>
+                <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                <span class="lecture-text">등록일 : 2024.03.03</span><br>
+                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">조회수 : 57</span>
+            </div>
+            <div class="lecture-item">
+                <img
+                    src="https://cdn.imweb.me/thumbnail/20230724/aae18e7e671d8.jpg"><br>
+                <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                <span class="lecture-text">등록일 : 2024.03.03</span><br>
+                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">조회수 : 57</span>
+            </div>
+            <div class="lecture-item">
+                <img
+                    src="https://educator.edunet.net/pluginfile.php/446458/course/overviewfiles/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%88%98%EC%97%85-%EC%8D%B8%EB%84%A4%EC%9D%BC-001.png"><br>
+                <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                <span class="lecture-text">등록일 : 2024.03.03</span><br>
+                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">조회수 : 57</span>
+            </div>
+        </div>
+        <!-- 새로운 공부 시작하기 버튼 추가 -->
+        <div class="start-study-container">
+            <button class="start-study-button">공부 시작하기</button>
+            <button class="start-study-button">공부 시작하기</button>
+            <button class="start-study-button">공부 시작하기</button>
+            <button class="start-study-button">공부 시작하기</button>
+        </div>
+        <div class="lecture-list">
+            <div class="lecture-item">
+                    <img
+                    src="https://educator.edunet.net/pluginfile.php/581541/course/overviewfiles/%EC%8D%B8%EB%84%A4%EC%9D%BC_10%EC%9B%94(2022).png"><br>
+                <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                <span class="lecture-text">등록일 : 2024.03.03</span><br>
+                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">조회수 : 57</span>
+            </div>
+            <div class="lecture-item">
+                    <img
+                    src="https://lh5.googleusercontent.com/proxy/qByC_zAG18U-XFQlejGFppG533FkLgBBvJZcdc0V_Hp5sSxly183mSjnbnr0GKd2bLTLZCIceWxSSmD4qKd9kxZpBiC-kFE5GlbejA6LW2lW5fD2F7QRlTH1ejJEYOzMQmARvKpmfkVb4jB-M3g3UtYivA4KFW1qy9doF1wgkBMnPXWLe8EFnWUC2iNfOH7E9w8dYgtv5RsrxpH5syCu8PlsgfPaSc8VEUVEZT2XvTYX65gj46MSt4rdvFLD5fE88KM"><br>
+                <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                <span class="lecture-text">등록일 : 2024.03.03</span><br>
+                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">조회수 : 57</span>
+            </div>
+            <div class="lecture-item">
+                <img
+                    src="https://cdn.imweb.me/thumbnail/20230724/aae18e7e671d8.jpg"><br>
+                <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                <span class="lecture-text">등록일 : 2024.03.03</span><br>
+                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">조회수 : 57</span>
+            </div>
+            <div class="lecture-item">
+                <img
+                    src="https://educator.edunet.net/pluginfile.php/446458/course/overviewfiles/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%88%98%EC%97%85-%EC%8D%B8%EB%84%A4%EC%9D%BC-001.png"><br>
+                <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                <span class="lecture-text">등록일 : 2024.03.03</span><br>
+                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">조회수 : 57</span>
+            </div>
+        </div>
+        <!-- 새로운 공부 시작하기 버튼 추가 -->
+        <div class="start-study-container">
+            <button class="start-study-button">공부 시작하기</button>
+            <button class="start-study-button">공부 시작하기</button>
+            <button class="start-study-button">공부 시작하기</button>
+            <button class="start-study-button">공부 시작하기</button>
+        </div>
+        
+    </div>
+</body>
+
+</html>
