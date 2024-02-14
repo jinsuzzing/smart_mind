@@ -16,8 +16,8 @@
 <!-- id : DAO에서 sq lSession을 사용해 Mapper파일 안쪽에 있는 SQL구문을 찾아 줄때 사용하는 값
 		  중복 허용하지 않는다.  -->
 <insert id="join" parameterType="com.sm.model.MemberDTO">
-INSERT INTO tb_member(mem_id, mem_pw, mem_name, mem_type)
-VALUES(#{mem_id}, #{mem_pw}, #{mem_name}, #{mem_type})
+INSERT INTO tb_member (mem_id, mem_pw, mem_name, mem_birthdate, mem_gender)
+VALUES(#{mem_id}, #{mem_pw}, #{mem_name}, #{mem_birthdate}, #{mem_gender})
 </insert>
 
 <select id="login" parameterType="com.sm.model.MemberDTO" resultType="com.sm.model.MemberDTO">

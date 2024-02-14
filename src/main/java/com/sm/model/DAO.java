@@ -16,7 +16,7 @@ public class DAO {
 
 	public int join(MemberDTO dto) {
 		// 1) 연결객체(sqlsession, connection) 빌려오기
-		SqlSession sqlSession = factory.openSession(true);
+		SqlSession sqlSession = factory.openSession();
 		// 2) 연결객체를 사용해서 sql 구문을 실행
 		//	  sql구문 : MemberMapper.xml 파일 안에 있음
 		int row = sqlSession.insert("join", dto);
