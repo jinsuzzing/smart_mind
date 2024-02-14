@@ -28,8 +28,7 @@
     <div class="content-container">
         <div class="video-container">
             <video id="myVideo" controls>
-                <source src="./동영상/KakaoTalk_20240213_110856205.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <source src="./video/KakaoTalk_20240213_110856205.mp4" type="video/mp4">
             </video>
         </div>
         <div class="test">
@@ -50,16 +49,16 @@
         </div>
     </div>
     <script>
-        document.getElementById('myVideo').addEventListener('ended', function() {
-            // 사용자에게 페이지 전환 여부를 묻는 확인 창을 표시
-            var isConfirmed = confirm('비디오 재생이 끝났습니다. 테스트 페이지로 이동하시겠습니까?');
-            // 사용자가 '확인'을 클릭한 경우에만 페이지 전환
-            if (isConfirmed) {
-                window.location.href = 'studyKoreanFirstTest.html';
-            }
-        });
+    document.getElementById('myVideo').addEventListener('ended', function() {
+        // 사용자에게 페이지 전환 여부를 묻는 확인 창을 표시
+        var isConfirmed = confirm('비디오 재생이 끝났습니다. 테스트 페이지로 이동하시겠습니까?');
+        // 사용자가 '확인'을 클릭한 경우에만 페이지 전환
+        if (isConfirmed) {
+            window.location.href = 'studyKoreanFirstTest.jsp';
+        }
+    });
     </script>
-
+    
 </body>
 
 </html>

@@ -63,7 +63,7 @@
         </div>
         <!-- 새로운 공부 시작하기 버튼 추가 -->
     <div class="start-study-container">
-        <a href="studyKoreanFirst.html">
+        <a href="studyKoreanFirst.jsp">
         <button class="start-study-button">공부 시작하기</button>
         </a>
         <button class="start-study-button">공부 시작하기</button>
