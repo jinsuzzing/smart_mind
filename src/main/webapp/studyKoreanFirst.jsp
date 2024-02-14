@@ -11,19 +11,19 @@
 
 <body>
     <div class="menu-bar">
-        <a href="main.html">
-            <img src="./이미지/로고(스마트_바탕).png" class="menu-logo">
+        <a href="main.jsp">
+            <img src="images/smart_image/logo_background.png" class="menu-logo">
         </a>
-        <a href="studyKorean.html" class="menu-item">공부하러가기</a>
-        <a href="schedule.html" class="menu-item">스케줄관리</a>
-        <a href="comunity.html" class="menu-item">커뮤니티</a>
-        <a href="notice.html" class="menu-item">공지사항</a>
+        <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>
+        <a href="schedule.jsp" class="menu-item">스케줄관리</a>
+        <a href="comunity.jsp" class="menu-item">커뮤니티</a>
+        <a href="notice.jsp" class="menu-item">공지사항</a>
     </div>
     <div class="button-container">
-        <a href="studyKorean.html" class="study-button">국어</a>
-        <a href="studyEnglish.html" class="study-button">영어</a>
-        <a href="studyMath.html" class="study-button">수학</a>
-        <a href="studyScience.html" class="study-button">과학</a>
+        <a href="studyKorean.jsp" class="study-button">국어</a>
+        <a href="studyEnglish.jsp" class="study-button">영어</a>
+        <a href="studyMath.jsp" class="study-button">수학</a>
+        <a href="studyScience.jsp" class="study-button">과학</a>
     </div>
     
     <div class="title">
@@ -55,7 +55,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" class="setitle">
-                        <a href="studyKoreanFirstView.html" style="display: block; color: inherit; text-decoration: none; height: 100%; width: 100%;">
+                        <a href="studyKoreanFirstView.jsp" style="display: block; color: inherit; text-decoration: none; height: 100%; width: 100%;">
                             01. 영어의 역사
                         </a>
                     </td>

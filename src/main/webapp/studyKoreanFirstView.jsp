@@ -11,19 +11,19 @@
 
 <body>
     <div class="menu-bar">
-        <a href="main.html">
-            <img src="./이미지/로고(스마트_바탕).png" class="menu-logo">
+        <a href="main.jsp">
+            <img src="images/smart_image/logo_background.png" class="menu-logo">
         </a>
-        <a href="studyKorean.html" class="menu-item">공부하러가기</a>
-        <a href="schedule.html" class="menu-item">스케줄관리</a>
-        <a href="comunity.html" class="menu-item">커뮤니티</a>
-        <a href="notice.html" class="menu-item">공지사항</a>
+        <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>
+        <a href="schedule.jsp" class="menu-item">스케줄관리</a>
+        <a href="comunity.jsp" class="menu-item">커뮤니티</a>
+        <a href="notice.jsp" class="menu-item">공지사항</a>
     </div>
     <div class="button-container">
-        <a href="studyKorean.html" class="study-button">국어</a>
-        <a href="studyEnglish.html" class="study-button">영어</a>
-        <a href="studyMath.html" class="study-button">수학</a>
-        <a href="studyScience.html" class="study-button">과학</a>
+        <a href="studyKorean.jsp" class="study-button">국어</a>
+        <a href="studyEnglish.jsp" class="study-button">영어</a>
+        <a href="studyMath.jsp" class="study-button">수학</a>
+        <a href="studyScience.jsp" class="study-button">과학</a>
     </div>
     <div class="content-container">
         <div class="video-container">
@@ -37,9 +37,9 @@
                 <!-- 재생목록 항목들 -->
                 <h2>재생목록</h2>
                 <ul>
-                    <li><a href="studyKoreanFirst.html">강의 1</a></li>
-                    <li><a href="studyKoreanSecond.html">강의 2</a></li>
-                    <li><a href="studyKoreanThird.html">강의 3</a></li>
+                    <li><a href="studyKoreanFirst.jsp">강의 1</a></li>
+                    <li><a href="studyKoreanSecond.jsp">강의 2</a></li>
+                    <li><a href="studyKoreanThird.jsp">강의 3</a></li>
                 </ul>
             </div>
             <!-- 버튼 추가 -->
