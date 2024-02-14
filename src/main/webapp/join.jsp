@@ -25,7 +25,7 @@
     <br>
     <img src="images/smart_image/logo.png" alt="" width="200px" onclick="goToHomePage()">
     <h1>회원가입</h1>
-    <form action="#" method="POST">
+    <form action="JoinService" method="POST">
         <table>
             <tr>
                 <!-- 아이디 입력란-->
