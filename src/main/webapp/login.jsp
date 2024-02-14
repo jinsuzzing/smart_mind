@@ -28,16 +28,16 @@
         <table>
             <tr height="50px">
                 <!-- 아이디 입력란-->
-                <td><label for="id"></label></td>
+                <td><label for="mem_id"></label></td>
                 <td><input type="text" placeholder="아이디" style="background-color: #f5f5f5; width: 400px; height: 40px;"
-                        id="id" name="id" required>
+                        id="mem_id" name="id" required>
                 </td>
             </tr>
             <tr>
                 <!-- 비밀번호 입력란-->
-                <td><label for="password"></label></td>
+                <td><label for="mem_pw"></label></td>
                 <td><input type="password" placeholder="비밀번호"
-                        style="background-color: #f5f5f5; width: 400px; height: 40px;" id="password" name="password"
+                        style="background-color: #f5f5f5; width: 400px; height: 40px;" id="mem_pw" name="password"
                         required></td>
             </tr>
 

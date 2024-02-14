@@ -29,38 +29,38 @@
         <table>
             <tr>
                 <!-- 아이디 입력란-->
-                <td><label for="id"></label></td>
+                <td><label for="mem_id"></label></td>
                 <td><input type="text" placeholder="아이디" style="background-color: #f5f5f5;width: 400px; height: 30px;"
-                        id="id" name="id" required>
+                        id="mem_id" name="id" required>
                 </td>
             </tr>
             <tr>
                 <!-- 비밀번호 입력란-->
-                <td><label for="password"></label></td>
+                <td><label for="mem_pw"></label></td>
                 <td><input type="password" placeholder="비밀번호"
-                        style="background-color: #f5f5f5; width: 400px; height: 30px;" id="password" name="password"
+                        style="background-color: #f5f5f5; width: 400px; height: 30px;" id="mem_pw" name="password"
                         required></td>
             </tr>
             <tr>
                 <!--이름 입력란-->
-                <td><label for="name"></label></td>
+                <td><label for="mem_name"></label></td>
                 <td><input type="text" placeholder="이름" style="background-color: #f5f5f5; width: 400px; height: 30px;"
-                        id="name" name="name" required></td>
+                        id="mem_name" name="name" required></td>
             </tr>
             <tr>
                 <!-- 생년월일 기입-->
-                <td><label for="birthdate"></label></td>
+                <td><label for="mem_birthdate"></label></td>
                 <td><input type="text" placeholder="생년월일 8자리"
-                        style="background-color: #f5f5f5; width: 400px; height: 30px;" id="birthdate" name="birthdate"
+                        style="background-color: #f5f5f5; width: 400px; height: 30px;" id="mem_birthdate" name="birthdate"
                         required onkeyup="formatBirthdate(this)">
                     <!-- onkeyup 생년월일 8자리를 .찍어주는기능-->
                 </td>
             </tr>
             <tr> <!-- 성별 선택-->
-                <td><label for="gender"></label></td>
+                <td><label for="mem_gender"></label></td>
                 <td>
-                    <input type="radio" id="gender" name="gender" value="남성" required>남
-                    <input type="radio" id="gender" name="gender" value="여성" required>여
+                    <input type="radio" id="mem_gender" name="gender" value="남성" required>남
+                    <input type="radio" id="mem_gender" name="gender" value="여성" required>여
                 </td>
             </tr>
         </table>
