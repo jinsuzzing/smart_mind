@@ -53,7 +53,7 @@
         <a>|</a>
         <a href="#" class="findPw">PW찾기</a>
         <a>|</a>
-        <a href="join.html" class="makeId">회원가입</a>
+        <a href="join.jsp" class="makeId">회원가입</a>
 
 
 
