@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <ul class="pagination justify-content-center" style="margin:20px 0">
     <c:if test="${pagination.previousPageGroup}">
         <li class="page-item"><a class="page-link" href="FindPostList.do?pageNo=${pagination.startPageOfPageGroup-1}">Previous</a></li>

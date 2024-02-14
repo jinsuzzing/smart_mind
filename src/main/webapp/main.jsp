@@ -13,7 +13,7 @@
 </head>
 	<body>
   <div class="login-button-container">
-    <button onclick='location.href="login.html";' class="login-button">로그인</button>
+    <button onclick='location.href="login.jsp";' class="login-button">로그인</button>
   </div>
 
   <div class="image-container">
@@ -36,7 +36,7 @@
 
 
 
-  <script src="assets/js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 	
 </html>
