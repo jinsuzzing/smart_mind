@@ -46,7 +46,6 @@ public class MemberDTO {
 	private String test_answer;
 	private String mem_answer;
 	private String test_corr;
-	
 	// 
 }
 
