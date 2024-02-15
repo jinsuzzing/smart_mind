@@ -33,12 +33,13 @@ public class Communityservice extends HttpServlet {
 		dto.setPost_content(post_content);
 
 		DAO dao = new DAO();
-		// dao.join을 사용하여 글내용 저장
+		// dao.join을 사용하여 글쓴이 , 글제목 , 글내용 저장
 		int row = dao.join(dto);
 
 		if (row > 0) {
 			// 내용 저장이 성공 했다면, forward 방식 이동
 			request.setAttribute("member", dto);
+			System.out.println("작성 완료~!!");
 			RequestDispatcher rd = request.getRequestDispatcher("comunity.jsp");
 			rd.forward(request, response);
 
@@ -46,6 +47,7 @@ public class Communityservice extends HttpServlet {
 			// 실패 했다면 다시 글작성 페이지로 이동(redirect 방식으로 이동)
 			response.sendRedirect("community_write.jsp");
 			System.out.println("글작성에 실패했습니다. 다시 작성해주세요~");
+
 		}
 
 	}
