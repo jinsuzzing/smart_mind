@@ -22,7 +22,7 @@
     <div class="middle">
         <h1>수업평가</h1>
         <h2>기초코딩 - 누구나하는 기초(5문제)</h2>
-        <form id="quizForm">
+        <form id="quizForm" action='testService'>
             <p>문제 1. 프로그램이란 무엇인가요?</p>
             <input type="radio" id="answer1" name="quiz" value="1"><label for="answer1">1. 데이터의 집합</label><br>
             <input type="radio" id="answer2" name="quiz" value="2"><label for="answer2">2. 명령어의 집합</label><br>

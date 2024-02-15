@@ -33,7 +33,7 @@
     <br>
     <br>
     <br>
-    <span class="success">ERROR : 회원정보를 확인 해주세요.</span>
+    <span class="success">회원정보를 확인 해주세요.</span>
     <br>
     <br>
 	<form action='login.jsp'>
