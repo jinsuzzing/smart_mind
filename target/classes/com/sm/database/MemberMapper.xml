@@ -21,7 +21,7 @@ VALUES(#{mem_id}, #{mem_pw}, #{mem_name}, #{mem_birthdate}, #{mem_gender})
 </insert>
 
 <select id="login" parameterType="com.sm.model.MemberDTO" resultType="com.sm.model.MemberDTO">
-SELECT mem_id, mem_name, mem_type FROM tb_member WHERE mem_id = #{mem_id} AND mem_pw = #{mem_pw}
+SELECT mem_id, mem_name FROM tb_member WHERE mem_id = #{mem_id} AND mem_pw = #{mem_pw}
 </select>
 
 <select id="selectAll" resultType="com.sm.model.MemberDTO">
