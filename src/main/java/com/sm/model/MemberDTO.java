@@ -22,4 +22,7 @@ public class MemberDTO {
 	private String mem_type;
 	private String mem_joined_at;
 
+//커뮤니티 글 제목 , 글 내용
+	private String post_title;
+	private String post_content;
 }
