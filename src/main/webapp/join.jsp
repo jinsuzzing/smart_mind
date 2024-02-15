@@ -86,6 +86,7 @@
                 input.value = year + "." + month + "." + day;
             }
         }
+        
     </script>
 </body>
 

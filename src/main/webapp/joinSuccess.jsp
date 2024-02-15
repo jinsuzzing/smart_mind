@@ -39,7 +39,9 @@
     <span class="success">OOO님! 회원가입이 완료 되었습니다.</span>
     <br>
     <br>
+    <form action='studyKorean.jsp'>
     <button type="submit" class="submit-button">메인 페이지로</button>
+    </form>
 
 
 </body>

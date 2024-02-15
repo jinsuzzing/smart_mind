@@ -22,6 +22,7 @@ public class DAO {
 		int row = sqlSession.insert("join", dto);
 		// 3) 연결객체 반납
 		sqlSession.close();
+		System.out.println("DAO join메소드 : "+row);
 		return row;
 	}
 	

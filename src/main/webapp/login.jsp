@@ -24,7 +24,7 @@
 
     <img src="images/smart_image/logo.png" alt="" width="200px" onclick="goToHomePage()">
     <h1>로그인</h1>
-    <form action="loginService" method="POST">
+    <form action="LoginService" method="POST">
         <table>
             <tr height="50px">
                 <!-- 아이디 입력란-->
