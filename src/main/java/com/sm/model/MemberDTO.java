@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class MemberDTO {
 	
 //	반드시 테이블의 컬럼명과 필드 변수명이 같아야한다.
-	
+	// 회원가입, 로그인
 	private String mem_id;
 	private String mem_pw;
 	private String mem_name;
@@ -25,4 +25,28 @@ public class MemberDTO {
 //커뮤니티 글 제목 , 글 내용
 	private String post_title;
 	private String post_content;
+	
+	// 스케줄 DTO
+	private String sche_seq;
+	private String sche_name;
+	private String sche_content;
+	private String started_at;
+	private String ended_at;
+	private String sche_type;
+	private String sche_color;
+	private String daily_seq;
+	
+	// 테스트 DTO
+	private String test_seq;
+	private String test_title;
+	private String test_item;
+	private String tested_at;
+	private String test_score;
+	private String test_period;
+	private String test_answer;
+	private String mem_answer;
+	private String test_corr;
+	
+	// 
 }
+
