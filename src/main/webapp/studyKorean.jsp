@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <button class="login">로그인</button>
     <div class="menu-bar">
         <a href="main.jsp">
             <img src="images/smart_image/logo_background.png" class="menu-logo">
@@ -19,6 +20,13 @@
         <a href="schedule.jsp" class="menu-item">스케줄관리</a>
         <a href="comunity.jsp" class="menu-item">커뮤니티</a>
         <a href="notice.jsp" class="menu-item">공지사항</a>
+    </div>
+    <div id="slider">
+        <div class="slides">
+          <div class="slide"><img src="images/smart_image/Group 278.jpg" alt="Slide 1"></div>
+          <div class="slide"><img src="images/smart_image/Group 283.jpg" alt="Slide 2"></div>
+          <div class="slide"><img src="images/smart_image/Group 286.jpg" alt="Slide 3"></div>
+          <div class="slide"><img src="images/smart_image/Group 284.jpg" alt="Slide 4"></div>
     </div>
     <div class="button-container">
         <a href="studyKorean.jsp" class="study-button">국어</a>
@@ -112,6 +120,7 @@
         </div>
         
     </div>
+    <script src = "assets/js/studyKorean.js"></script>
 </body>
 
 </html>
