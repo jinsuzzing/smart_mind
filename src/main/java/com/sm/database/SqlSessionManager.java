@@ -21,6 +21,7 @@ public class SqlSessionManager {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 	
 	// sqlSessionFactory라는 객체를 리턴해주는 메소드

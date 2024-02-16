@@ -73,5 +73,20 @@ public class DAO {
 		
 	}
 	
+	
+	public int write(MemberDTO dto) {
+		// 1) 연결객체(sqlsession, connection) 빌려오기
+		SqlSession sqlSession = factory.openSession(true);
+		// 2) 연결객체를 사용해서 sql 구문을 실행
+		//	  sql구문 : MemberMapper.xml 파일 안에 있음
+		int row = sqlSession.insert("write", dto);
+		System.out.println(dto);
+		// 3) 연결객체 반납
+		sqlSession.close();
+		return row;
+	}
+	
+	
+	
 
 }

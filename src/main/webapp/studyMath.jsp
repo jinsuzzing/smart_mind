@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,8 +13,17 @@
 </head>
 
 <body>
+	<nav>
+		<c:if test="${result == null}">
+			<button onclick='location.href="login.jsp";' class="login">로그인</button>
+		</c:if>
+		<c:if test = "${result != null}">
+			<button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
+			<button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
+		</c:if>
+	</nav>
     <div class="menu-bar">
-        <a href="main.jsp">
+        <a href="studyKorean.jsp">
             <img src="images/smart_image/logo_background.png" class="menu-logo">
         </a>
         <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>

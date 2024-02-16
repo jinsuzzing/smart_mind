@@ -30,8 +30,8 @@
 	</select>
 
 	<select id="write" parameterType="com.sm.model.MemberDTO">
-		INSERT INTO tb_post (mem_id, post_title, post_content)
-		VALUES(#{mem_id},#{post_title},#{post_content})
+		INSERT INTO tb_post (POST_SEQ, mem_id, post_title, post_content)
+		VALUES(TB_POST_SEQ.NEXTVAL, #{mem_id},#{post_title},#{post_content})
 	</select>
 
 	<!-- resultType 동작원리 : 나만의 자료형으로 resultType을 명시해놓았다면 : 1. 기본 생성자를 호출해서 객체를 

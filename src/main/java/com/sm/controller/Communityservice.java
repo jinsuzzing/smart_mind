@@ -31,10 +31,10 @@ public class Communityservice extends HttpServlet {
 		dto.setMem_id(mem_id);
 		dto.setPost_title(post_title);
 		dto.setPost_content(post_content);
-
+		System.out.println("글쓰기");
 		DAO dao = new DAO();
 		// dao.join을 사용하여 글쓴이 , 글제목 , 글내용 저장
-		int row = dao.join(dto);
+		int row = dao.write(dto);
 
 		if (row > 0) {
 			// 내용 저장이 성공 했다면, forward 방식 이동

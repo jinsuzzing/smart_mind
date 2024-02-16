@@ -21,7 +21,7 @@ public class LogoutService extends HttpServlet {
 		// 한스텝
 		request.getSession().invalidate();
 		// 3. main.jsp로 redirect 방식으로 이동
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("studyKorean.jsp");
 	
 	}
 

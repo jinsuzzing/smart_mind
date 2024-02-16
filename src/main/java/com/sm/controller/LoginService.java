@@ -39,6 +39,7 @@ public class LoginService extends HttpServlet {
 			// session에 데이터 담기
 			session.setAttribute("result", result);
 			response.sendRedirect("studyKorean.jsp");
+			System.out.println(result);
 		}
 		else {
 			response.sendRedirect("loginError.jsp");
