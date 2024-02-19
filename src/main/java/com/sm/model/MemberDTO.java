@@ -54,4 +54,3 @@ public class MemberDTO {
 	private String test_corr;
 	// 
 }
-
