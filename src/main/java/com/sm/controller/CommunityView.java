@@ -22,7 +22,7 @@ public class CommunityView extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		System.out.println("커뮤니티 서블릿");
+		
 		// 1. DAO 생성
 		DAO dao = new DAO();
 		
