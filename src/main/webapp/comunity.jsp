@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -41,6 +42,7 @@
 						</tr>
 					</thead>
 					<tbody>
+					
 						<tr>
 							<td>3</td>
 							<th><a href="#!">[공지사항] 개인정보 처리방침 변경안내처리방침</a>
@@ -48,12 +50,14 @@
 							<td>2017.07.13</td>
 						</tr>
 
-						<tr>
-							<td>2</td>
-							<th><a href="#!">이벤트 당첨자 안내!!</a></th>
-							<td>2017.06.15</td>
-						</tr>
-
+						<c:forEach items="${resultList}" var="mdto">
+							<tr>
+								<td>${mdto.post_title}</td>
+								<td>${mdto.mem_id}</td>
+								<td>${mdto.created_at}</td>							
+							</tr>
+						</c:forEach>
+						
 						<tr>
 							<td>1</td>
 							<th><a href="#!">공지사항 안내입니다.</a></th>
