@@ -4,13 +4,13 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
+ 
 <head>
     <title>배너 메뉴 페이지</title>
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/studyKoreanFirst.css">
 </head>
-
+ 
 <body>
 	<nav>
 		<c:if test="${result == null}">

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="assets/css/comunity.css">
 <link rel="stylesheet" href="assets/css/menu.css">
 </head>
-
+  
 <body>
 	<div class="menu-bar">
 		<a href="main.jsp"> <img

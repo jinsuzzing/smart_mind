@@ -11,7 +11,7 @@
     <title>Study Page</title>
     <link rel="stylesheet" href="assets/css/studyKorean.css"> <!-- CSS 파일 연결 -->
 </head>
-
+ 
 <body>
 	<nav>
 		<c:if test="${result == null}">

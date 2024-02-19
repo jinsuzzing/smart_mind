@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/studyKoreanFirstScore.css">
 </head>
-
+ 
 <body>
 	<nav>
 		<c:if test="${result == null}">

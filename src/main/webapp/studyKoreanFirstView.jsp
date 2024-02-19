@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/studyKoreanFirstView.css">
 </head>
-
+ 
 <body>
 	<nav>
 		<c:if test="${result == null}">
