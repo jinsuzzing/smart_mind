@@ -22,9 +22,15 @@ public class MemberDTO {
 	private String mem_type;
 	private String mem_joined_at;
 
-//커뮤니티 글 제목 , 글 내용
+	//커뮤니티
+	private String post_seq;
 	private String post_title;
 	private String post_content;
+	private String post_file;
+	private String post_views;
+	private String post_likes;
+	private String created_at;
+	private String is_deleted;
 	
 	// 스케줄 DTO
 	private String sche_seq;

@@ -33,6 +33,13 @@
 		INSERT INTO tb_post (POST_SEQ, mem_id, post_title, post_content)
 		VALUES(TB_POST_SEQ.NEXTVAL, #{mem_id},#{post_title},#{post_content})
 	</select>
+	
+	<select id="communityView" resultType="com.sm.model.MemberDTO">
+		SELECT post_seq, post_title, post_content, post_views, post_likes, created_at, mem_id
+		FROM tb_post
+	</select>
+	
+
 
 	<!-- resultType 동작원리 : 나만의 자료형으로 resultType을 명시해놓았다면 : 1. 기본 생성자를 호출해서 객체를 
 		생성(mybatis가 알아서) : 2. 조회한 테이블의 컬러명과 일치하는 필드가 있는지 확인 : 3. 해당 필드의 setter 메소드를 
