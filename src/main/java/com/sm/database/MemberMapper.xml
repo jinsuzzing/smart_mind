@@ -34,6 +34,12 @@
 		VALUES(TB_POST_SEQ.NEXTVAL, #{mem_id},#{post_title},#{post_content})
 	</select>
 	
+	<!-- 공지사항 (notice)테이블 생성 후 수정 -->
+	<select id="notice" parameterType="com.sm.model.MemberDTO">
+		INSERT INTO tb_post (POST_SEQ, mem_id, post_title, post_content)
+		VALUES(TB_POST_SEQ.NEXTVAL, #{mem_id},#{post_title},#{post_content})
+	</select>
+	
 	<select id="communityView" resultType="com.sm.model.MemberDTO">
 		SELECT post_seq, post_title, post_content, post_views, post_likes, created_at, mem_id
 		FROM tb_post
