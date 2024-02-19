@@ -18,7 +18,7 @@
 			src="images/smart_image/logo_background.png" class="menu-logo">
 		</a> <a href="studyKorean.jsp" class="menu-item">공부하러가기</a> <a
 			href="schedule.jsp" class="menu-item">스케줄관리</a> <a
-			href="comunity.jsp" class="menu-item">커뮤니티</a> <a href="notice.jsp"
+			href="community.jsp" class="menu-item">커뮤니티</a> <a href="notice.jsp"
 			class="menu-item">공지사항</a>
 	</div>
 	<section class="notice">
@@ -52,9 +52,9 @@
 
 						<c:forEach items="${resultList}" var="mdto">
 							<tr>
-								<td>${mdto.post_title}</td>
-								<td>${mdto.mem_id}</td>
-								<td>${mdto.created_at}</td>							
+								<th><a href="#!">${mdto.post_title}</a>
+								<p>${mdto.mem_id}</p></th>
+								<td>${mdto.created_at}</td>
 							</tr>
 						</c:forEach>
 						
@@ -91,7 +91,7 @@
 			<li><a href="#" class="last">끝 페이지</a></li>
 		</ul>
 	</div>
-	<script src="comunity_js.jsp"></script>
+	<script src="comunity_js_.jsp"></script>
 	
 	<script>
 		function goToCommunityWrite() {

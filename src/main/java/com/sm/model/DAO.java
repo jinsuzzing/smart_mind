@@ -97,7 +97,7 @@ public class DAO {
 		// 1) 객체 배열 2) ArrayList
 		// : 크기가 가변적인 ArrayList 사용했었음
 		// : ArrayList의 부모 클라스 격인 List 형태로 리턴을 받아옴!
-		
+		System.out.println("dao : "+resultList);
 		// 3. 연결객체 반납
 		sqlSession.close();
 		// 4. 조회한 결과값 반환

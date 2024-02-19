@@ -22,7 +22,7 @@ public class CommunityView extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		
+		System.out.println("커뮤니티 서블릿");
 		// 1. DAO 생성
 		DAO dao = new DAO();
 		
@@ -33,7 +33,7 @@ public class CommunityView extends HttpServlet {
 		request.setAttribute("resultList", resultList);
 		
 		// 4. select.jsp로 foward 방식으로 이동
-		RequestDispatcher rd = request.getRequestDispatcher("commuity.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("community.jsp");
 		rd.forward(request, response);
 		
 	
