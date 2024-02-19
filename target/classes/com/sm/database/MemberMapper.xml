@@ -58,9 +58,9 @@
 		WHERE mem_id = #{mem_id}
 	</update>
 
-	<insert id="insertTestInfo" parameterType="com.sm.model.TestDTO">
-        INSERT INTO tb_test (MEM_ID, TEST_TITLE, TEST_ITEM, TESTED_AT, TEST_SCORE, TEST_PERIOD, TEST_ANSWER, MEM_ANSWER, TEST_CORR)
-        VALUES (#{memId}, #{testTitle}, #{testItem}, #{testedAt}, #{testScore}, #{testPeriod}, #{testAnswer}, #{memAnswer}, #{testCorr})
+	<insert id="test" parameterType="com.sm.model.TestDTO">
+        INSERT INTO tb_test (TEST_SEQ, MEM_ID, TEST_ANSWER, MEM_ANSWER, TEST_CORR)
+        VALUES (TB_TEST_SEQ.NEXTVAL, #{mem_id}, #{test_answer}, #{mem_answer}, #{test_corr})
     </insert>
 
 

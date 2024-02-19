@@ -7,6 +7,10 @@
 <!-- 'mybatis 설정 파일이다'를 알려주는 태그 --> 
 <!-- dtd : document type definition --> 
 <configuration>
+
+    <settings>
+        <setting name="jdbcTypeForNull" value="NULL" />
+    </settings>
 <!-- 해당 프로젝트에서 사용하는 DB 연결과 설정파일 전부 지정하는 공간 -->
   <environments default="development">
   <!-- environments : database가 여러개 사용될 수 있다. DB에 대한 정보들을 기술할 수 있는 공간 -->

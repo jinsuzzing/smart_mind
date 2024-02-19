@@ -34,11 +34,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/main/webapp/images/smart_image</name>
-			<type>2</type>
-			<locationURI>PARENT-2-PROJECT_LOC/%EB%AF%B8%EB%8B%88%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/Jinsu/Project/%EC%9D%B4%EB%AF%B8%EC%A7%80</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>

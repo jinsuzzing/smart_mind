@@ -34,26 +34,29 @@
         <h1>수업평가</h1>
         <h2>기초코딩 - 누구나하는 기초(5문제)</h2>
         <form id="quizForm" action='testService'>
+        	<input type="hidden" name="mem_id" value = "${result.mem_id}"/>
+        	<input type="hidden" name="test_answer" value = "2"/>
             <p>문제 1. 프로그램이란 무엇인가요?</p>
-            <input type="radio" id="answer1" name="quiz" value="1"><label for="answer1">1. 데이터의 집합</label><br>
-            <input type="radio" id="answer2" name="quiz" value="2"><label for="answer2">2. 명령어의 집합</label><br>
-            <input type="radio" id="answer3" name="quiz" value="3"><label for="answer3">3. 하드웨어의 집합</label><br>
-            <input type="radio" id="answer4" name="quiz" value="4"><label for="answer4">4. 사용자의 입력만을 받는 시스템</label><br>
-            <input type="radio" id="answer5" name="quiz" value="5"><label for="answer5">5. 인터넷 브라우저</label><br>
-            <button type="button" onclick="submitAnswer()">정답 제출</button>
+            <input type="radio" id="mem_answer" name="mem_answer" value="1"><label for="answer1">1. 데이터의 집합</label><br>
+            <input type="radio" id="mem_answer" name="mem_answer" value="2"><label for="answer2">2. 명령어의 집합</label><br>
+            <input type="radio" id="mem_answer" name="mem_answer" value="3"><label for="answer3">3. 하드웨어의 집합</label><br>
+            <input type="radio" id="mem_answer" name="mem_answer" value="4"><label for="answer4">4. 사용자의 입력만을 받는 시스템</label><br>
+            <input type="radio" id="mem_answer" name="mem_answer" value="5"><label for="answer5">5. 인터넷 브라우저</label><br>
+            <button type="submit" class="writeOk">정답제출</button>
         </form>
     </div>
     <script>
-        function submitAnswer() {
+/*         function submitAnswer() {
             const selectedAnswer = document.querySelector('input[name="quiz"]:checked');
-            if (!selectedAnswer) {
-                alert("답변을 선택해주세요.");
-                return;
-            }
+            
             const correctAnswer = "2"; // 실제 정답 가정
             const isCorrect = selectedAnswer.value === correctAnswer;
             sessionStorage.setItem("isCorrect", isCorrect); // 결과 저장
             window.location.href = 'studyKoreanFirstScore.jsp'; // 결과 페이지로 이동
+        } */
+        if (!mem_answer) {
+            alert("답변을 선택해주세요.");
+            return;
         }
     </script>
 </body>
