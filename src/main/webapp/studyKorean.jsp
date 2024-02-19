@@ -39,7 +39,7 @@
           <div class="slide"><img src="images/smart_image/Group 284.jpg" alt="Slide 4"></div>
     </div>
     <div class="button-container">
-        <a href="studyKorean.jsp" class="study-button">국어</a>
+        <a href="studyKorean.jsp" id="c" class="study-button">국어</a>
         <a href="studyEnglish.jsp" class="study-button">영어</a>
         <a href="studyMath.jsp" class="study-button">수학</a>
         <a href="studyScience.jsp" class="study-button">과학</a>
@@ -49,34 +49,34 @@
         <div class="lecture-list">
             <div class="lecture-item">
                 <img
-                    src="https://file.miricanvas.com/template_thumb/2020/04/23/6087-1587631276040/394a9de1-35a8-4f5f-956b-b71a315652fe/thumb.jpg"><br>
-                <span class="lecture-text">쑥쑥 쉬운 국어</span><br>
+                    src="images/smart_image/korea1.jpg"><br>
+                <span class="lecture-text">재미있는 한글 여행</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+                <span class="lecture-text">강사명 : 김한글 선생님</span><br>
                 <span class="lecture-text">조회수 : 57</span>
             </div>
             <div class="lecture-item">
                 <img
-                    src="https://file.miricanvas.com/template_thumb/2020/07/10/122-1594355250136/e33ff071-21ff-4218-823f-f5c7f2177b6f/thumb.jpg"><br>
-                <span class="lecture-text">쑥쑥 쉬운 국어</span><br>
+                    src="images/smart_image/korea2.jpg"><br>
+                <span class="lecture-text">이야기로 배우는 국어</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 이문장 선생님</span><br>
+                <span class="lecture-text">조회수 : 64</span>
             </div>
             <div class="lecture-item">
                 <img
-                    src="https://mblogthumb-phinf.pstatic.net/MjAyMjAzMTFfMjY4/MDAxNjQ2OTc3MzE1MTQz.A3P4iS7FBhYnnevK4oml3o5abobVglz-R6sgQk-28H0g.8wfo1piCBuwmAqUTf9MrBTYB91rm94DGOIU8I47DQIUg.PNG.kukje5157/%EB%B8%94%EB%A1%9C%EA%B7%B8_%EC%8D%B8%EB%84%A4%EC%9D%BC_%EC%B4%88%EB%93%B1%EB%8F%85%ED%95%B4.png?type=w800"><br>
-                <span class="lecture-text">쑥쑥 쉬운 국어</span><br>
+                    src="images/smart_image/korea3.jpg"><br>
+                <span class="lecture-text">마법의 국어 규칙</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 최띄어쓰기 선생님</span><br>
+                <span class="lecture-text">조회수 : 43</span>
             </div>
             <div class="lecture-item">
-                <img src="https://www.dolearn.ai/storage/uploads/thumbnail/430.jpg"><br>
-                <span class="lecture-text">쑥쑥 쉬운 국어</span><br>
+                <img src="images/smart_image/korea4.jpg"><br>
+                <span class="lecture-text">우리말 놀이터</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 박사랑 선생님</span><br>
+                <span class="lecture-text">조회수 : 77</span>
             </div>
         </div>
         <!-- 새로운 공부 시작하기 버튼 추가 -->
@@ -91,34 +91,34 @@
     <div class="lecture-list">
             <div class="lecture-item">
                 <img
-                    src="https://file.miricanvas.com/template_thumb/2020/04/23/6087-1587631276040/394a9de1-35a8-4f5f-956b-b71a315652fe/thumb.jpg"><br>
-                <span class="lecture-text">쑥쑥 쉬운 국어</span><br>
+                    src="images/smart_image/korea5.jpg"><br>
+                <span class="lecture-text">동화 속 숨은 국어 비밀</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 손글씨 선생님</span><br>
+                <span class="lecture-text">조회수 : 121</span>
             </div>
             <div class="lecture-item">
                 <img
-                    src="https://file.miricanvas.com/template_thumb/2020/07/10/122-1594355250136/e33ff071-21ff-4218-823f-f5c7f2177b6f/thumb.jpg"><br>
-                <span class="lecture-text">쑥쑥 쉬운 국어</span><br>
+                    src="images/smart_image/korea6.jpg"><br>
+                <span class="lecture-text">말하기와 듣기의 모험</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 조어법 선생님</span><br>
+                <span class="lecture-text">조회수 : 37</span>
             </div>
             <div class="lecture-item">
                 <img
-                    src="https://mblogthumb-phinf.pstatic.net/MjAyMjAzMTFfMjY4/MDAxNjQ2OTc3MzE1MTQz.A3P4iS7FBhYnnevK4oml3o5abobVglz-R6sgQk-28H0g.8wfo1piCBuwmAqUTf9MrBTYB91rm94DGOIU8I47DQIUg.PNG.kukje5157/%EB%B8%94%EB%A1%9C%EA%B7%B8_%EC%8D%B8%EB%84%A4%EC%9D%BC_%EC%B4%88%EB%93%B1%EB%8F%85%ED%95%B4.png?type=w800"><br>
-                <span class="lecture-text">쑥쑥 쉬운 국어</span><br>
+                    src="images/smart_image/korea7.webp"><br>
+                <span class="lecture-text">글자 탐험대</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 홍읽기 선생님</span><br>
+                <span class="lecture-text">조회수 : 88</span>
             </div>
             <div class="lecture-item">
                 <img src="https://www.dolearn.ai/storage/uploads/thumbnail/430.jpg"><br>
-                <span class="lecture-text">쑥쑥 쉬운 국어</span><br>
+                <span class="lecture-text">신나는 문장 여행</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 윤문법 선생님</span><br>
+                <span class="lecture-text">조회수 : 107</span>
             </div>
         </div>
         <!-- 새로운 공부 시작하기 버튼 추가 -->
