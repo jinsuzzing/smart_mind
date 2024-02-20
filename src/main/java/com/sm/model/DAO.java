@@ -126,7 +126,23 @@ public class DAO {
 		return row;
 	}
 	
-	
+	public List<MemberDTO> scheduleView() {
+		// 1. splsession 빌려오기
+		SqlSession sqlSession = factory.openSession();
+		// 2. sqlsession 사용해서 sql 쿼리문 실행
+		//	 쿼리문 --> mapper.xml
+		List<MemberDTO> resultList = sqlSession.selectList("scheduleAddView");
+		// MemberDTO --> 한명에 대한 정보를 표현 할 수 있는 type
+		// 여러명의 정보를 하나로 묶어서 표현해야 함.
+		// 1) 객체 배열 2) ArrayList
+		// : 크기가 가변적인 ArrayList 사용했었음
+		// : ArrayList의 부모 클라스 격인 List 형태로 리턴을 받아옴!
+		
+		// 3. 연결객체 반납
+		sqlSession.close();
+		// 4. 조회한 결과값 반환
+		return resultList;
+	}
 	
 
 }

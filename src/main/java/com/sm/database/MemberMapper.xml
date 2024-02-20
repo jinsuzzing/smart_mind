@@ -58,14 +58,14 @@
 		WHERE mem_id = #{mem_id}
 	</update>
 
-	<insert id="test" parameterType="com.sm.model.TestDTO">
+	<insert id="test" parameterType="com.sm.model.MemberDTO">
         INSERT INTO tb_test (TEST_SEQ, MEM_ID, TEST_ANSWER, MEM_ANSWER, TEST_CORR)
         VALUES (TB_TEST_SEQ.NEXTVAL, #{mem_id}, #{test_answer}, #{mem_answer}, #{test_corr})
     </insert>
     
     <insert id="scheduleAdd" parameterType="com.sm.model.MemberDTO">
         INSERT INTO tb_schedule (SCHE_SEQ, MEM_ID, SCHE_NAME, SCHE_CONTENT, STARTED_AT, ENDED_AT, SCHE_TYPE, SCHE_COLOR, DAILY_SEQ)
-        VALUES (TB_SCHEDULE_SEQ.NEXTVAL, #{memId}, #{scheName}, #{scheContent}, #{startedAt}, #{endedAt}, #{scheType}, #{scheColor}, #{dailySeq})
+        VALUES (TB_SCHEDULE_SEQ.NEXTVAL, #{mem_id}, #{sche_name}, #{sche_content}, #{started_at}, #{ended_at}, #{sche_type}, #{sche_color}, #{daily_seq})
     </insert>
 
 

@@ -22,6 +22,7 @@ function buildCalendar(year = new Date().getFullYear(), month = new Date().getMo
                 date++;
             }
         }
+        
         calendarBody.appendChild(row);
     }
 
@@ -75,12 +76,25 @@ document.getElementById("addScheduleModal").addEventListener("click", function()
 });
 
 function addSchedule() {
-    const date = document.getElementById("scheduleDate").value;
-    const text = document.getElementById("scheduleText").value;
-    // 입력 값 검증 후 달력에 스케줄 추가 로직 구현
-    console.log(date, text); // 실제 구현 필요
-    document.getElementById("scheduleModal").style.display = "none"; // 모달 숨김
+    const date = document.getElementById("scheduleDate").value; // 날짜 입력 필드의 값을 가져옵니다.
+    const text = document.getElementById("scheduleText").value; // 텍스트 입력 필드의 값을 가져옵니다.
+
+    // XMLHttpRequest 객체를 생성하여 서버로 요청을 전송합니다.
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "scheduleAdd", true); // 'POST' 메소드를 사용하여 'scheduleAdd' 서블릿으로 요청을 보냅니다.
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); // 요청의 본문 타입을 설정합니다.
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            alert("스케줄이 추가되었습니다."); // 요청이 성공적으로 처리되면 사용자에게 알립니다.
+            // 여기에 성공 시 추가 동작을 구현할 수 있습니다.
+        }
+    };
+
+    // 서버로 전송할 데이터를 인코딩하여 보냅니다.
+    xhr.send("schedule=" + encodeURIComponent(text) + "&selectedDate=" + date);
 }
+
 
 // 달력 날짜 클릭 시 이벤트 처리
 document.querySelectorAll("#calendar-table td").forEach(td => {
@@ -91,5 +105,25 @@ document.querySelectorAll("#calendar-table td").forEach(td => {
         console.log(selectedDate, scheduleText); // 실제 구현 필요
     });
 });
+
+function fetchScheduleAndDisplay() {
+    fetch("scheduleAddView") // 서버 URL로 변경
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(schedule => {
+            // 달력의 날짜 칸을 찾아 스케줄 내용을 표시하는 로직
+            // 예: 날짜에 해당하는 td를 찾고, schedule.content를 표시
+            const cell = document.querySelector(`#calendar-body td[data-date="${schedule.date}"]`);
+            if (cell) {
+                cell.innerHTML += `<div>${schedule.content}</div>`; // 스케줄 내용 추가
+            }
+        });
+    })
+    .catch(error => console.error('Error fetching schedule:', error));
+}
+
+// 페이지 로드 시 스케줄 데이터 요청
+document.addEventListener('DOMContentLoaded', fetchScheduleAndDisplay);
+
 
 
