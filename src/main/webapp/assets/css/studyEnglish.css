@@ -8,7 +8,7 @@
 }
 
 * {
-	font-family: 'NPSfontBold';
+   font-family: 'NPSfontBold';
 }
        
        /* 메뉴바 스타일 */
@@ -97,6 +97,10 @@ button.logout {
     align-items: center; /* 중앙 정렬 */
     padding: 20px;
     box-sizing: border-box;
+}
+
+#c.study-button{
+   background-color: #D2003F; /* 배경색 */
 }
 
 .study-button {

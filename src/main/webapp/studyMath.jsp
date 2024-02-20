@@ -13,28 +13,28 @@
 </head>
  
 <body>
-	<nav>
-		<c:if test="${result == null}">
-			<button onclick='location.href="login.jsp";' class="login">로그인</button>
-		</c:if>
-		<c:if test = "${result != null}">
-			<button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
-			<button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
-		</c:if>
-	</nav>
+   <nav>
+      <c:if test="${result == null}">
+         <button onclick='location.href="login.jsp";' class="login">로그인</button>
+      </c:if>
+      <c:if test = "${result != null}">
+         <button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
+         <button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
+      </c:if>
+   </nav>
     <div class="menu-bar">
         <a href="studyKorean.jsp">
             <img src="images/smart_image/logo_background.png" class="menu-logo">
         </a>
         <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>
         <a href="schedule.jsp" class="menu-item">스케줄관리</a>
-        <a href="comunity.jsp" class="menu-item">커뮤니티</a>
+        <a href="community.jsp" class="menu-item">커뮤니티</a>
         <a href="notice.jsp" class="menu-item">공지사항</a>
     </div>
     <div class="button-container">
         <a href="studyKorean.jsp" class="study-button">국어</a>
         <a href="studyEnglish.jsp" class="study-button">영어</a>
-        <a href="studyMath.jsp" class="study-button">수학</a>
+        <a href="studyMath.jsp" id="c" class="study-button">수학</a>
         <a href="studyScience.jsp" class="study-button">과학</a>
     </div>
     <div class="lecture-container">
@@ -42,35 +42,35 @@
         <div class="lecture-list">
             <div class="lecture-item">
                     <img
-                    src="https://mblogthumb-phinf.pstatic.net/MjAyMjA3MTVfMTc2/MDAxNjU3ODU5MjYzNTIw.hi8cwHeQxqAiTmuy_Bi7eJdaNsgP90ZTqQYXXVdW9JQg.aZRQFNiEI3W4CLlzhN4NXhH1yHORcCVU-i5fcppu_Wkg.PNG.gne_education/2022_%EA%B2%BD%EB%82%A8%EA%B5%90%EC%9C%A1%EC%B2%AD_%EC%8D%B8%EB%84%A4%EC%9D%BC.png?type=w800"><br>
-                <span class="lecture-text">쑥쑥 쉬운 수학</span><br>
+                    src="images/smart_image/math1.webp"><br>
+                <span class="lecture-text">마법의 숫자 나라 탐험기</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 김수학 선생님</span><br>
+                <span class="lecture-text">조회수 : 77</span>
             </div>
             <div class="lecture-item">
                     <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT66Dl76iuFq_6-mR7yoOb76YNN5Q8MyvYuU5AK-TfACQ&s"><br>
-                <span class="lecture-text">쑥쑥 쉬운 수학</span><br>
+                    src="images/smart_image/math2.webp"><br>
+                <span class="lecture-text">수학 여행: 더하기와 빼기의 모험</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 이계산 선생님</span><br>
+                <span class="lecture-text">조회수 : 92</span>
             </div>
             <div class="lecture-item">
                 <img
-                    src="https://educator.edunet.net/pluginfile.php/576249/course/overviewfiles/%EC%8D%B8%EB%84%A4%EC%9D%BC.png"><br>
-                <span class="lecture-text">쑥쑥 쉬운 수학</span><br>
+                    src="images/smart_image/math3.webp"><br>
+                <span class="lecture-text">시간여행자의 수학 미션</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 박피타고라스 선생님</span><br>
+                <span class="lecture-text">조회수 : 107</span>
             </div>
             <div class="lecture-item">
                 <img
-                    src="https://educator.edunet.net/pluginfile.php/525387/course/overviewfiles/%EB%98%91%EB%98%91%EC%88%98%ED%95%99%ED%83%90%ED%97%98%EB%8C%80%EC%8D%B8%EB%84%A4%EC%9D%BC.png"><br>
-                <span class="lecture-text">쑥쑥 쉬운 수학</span><br>
+                    src="images/smart_image/math4.webp"><br>
+                <span class="lecture-text">우주 정복자를 위한 수학</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
-                <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-                <span class="lecture-text">조회수 : 57</span>
+                <span class="lecture-text">강사명 : 최별하 선생님</span><br>
+                <span class="lecture-text">조회수 : 99</span>
             </div>
         </div>
         <!-- 새로운 공부 시작하기 버튼 추가 -->
@@ -83,34 +83,34 @@
     <div class="lecture-list">
         <div class="lecture-item">
                 <img
-                src="https://educator.edunet.net/pluginfile.php/581541/course/overviewfiles/%EC%8D%B8%EB%84%A4%EC%9D%BC_10%EC%9B%94(2022).png"><br>
-            <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                src="images/smart_image/math5.webp"><br>
+            <span class="lecture-text">해적과 함께하는 분수의 보물찾기</span><br>
             <span class="lecture-text">등록일 : 2024.03.03</span><br>
-            <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-            <span class="lecture-text">조회수 : 57</span>
+            <span class="lecture-text">강사명 : 정보물 선생님</span><br>
+            <span class="lecture-text">조회수 : 87</span>
         </div>
         <div class="lecture-item">
                 <img
-                src="https://lh5.googleusercontent.com/proxy/qByC_zAG18U-XFQlejGFppG533FkLgBBvJZcdc0V_Hp5sSxly183mSjnbnr0GKd2bLTLZCIceWxSSmD4qKd9kxZpBiC-kFE5GlbejA6LW2lW5fD2F7QRlTH1ejJEYOzMQmARvKpmfkVb4jB-M3g3UtYivA4KFW1qy9doF1wgkBMnPXWLe8EFnWUC2iNfOH7E9w8dYgtv5RsrxpH5syCu8PlsgfPaSc8VEUVEZT2XvTYX65gj46MSt4rdvFLD5fE88KM"><br>
-            <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                src="images/smart_image/math6.webp"><br>
+            <span class="lecture-text">수학의 마법사: 도형의 비밀</span><br>
             <span class="lecture-text">등록일 : 2024.03.03</span><br>
-            <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+            <span class="lecture-text">강사명 : 송다각 선생님</span><br>
             <span class="lecture-text">조회수 : 57</span>
         </div>
         <div class="lecture-item">
             <img
-                src="https://cdn.imweb.me/thumbnail/20230724/aae18e7e671d8.jpg"><br>
-            <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                src="images/smart_image/math7.webp"><br>
+            <span class="lecture-text">너도 할 수 있어! 재미있는 방정식</span><br>
             <span class="lecture-text">등록일 : 2024.03.03</span><br>
-            <span class="lecture-text">강사명 : 임경남 선생님</span><br>
-            <span class="lecture-text">조회수 : 57</span>
+            <span class="lecture-text">강사명 : 황미지 선생님</span><br>
+            <span class="lecture-text">조회수 : 180</span>
         </div>
         <div class="lecture-item">
             <img
-                src="https://educator.edunet.net/pluginfile.php/446458/course/overviewfiles/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%88%98%EC%97%85-%EC%8D%B8%EB%84%A4%EC%9D%BC-001.png"><br>
-            <span class="lecture-text">쑥쑥 쉬운 영어</span><br>
+                src="images/smart_image/math8.webp"><br>
+            <span class="lecture-text">수학으로 떠나는 세계 여행</span><br>
             <span class="lecture-text">등록일 : 2024.03.03</span><br>
-            <span class="lecture-text">강사명 : 임경남 선생님</span><br>
+            <span class="lecture-text">강사명 : 윤지구 선생님</span><br>
             <span class="lecture-text">조회수 : 57</span>
         </div>
     </div>

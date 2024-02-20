@@ -13,15 +13,15 @@
 </head>
 
 <body>
-	<nav>
-		<c:if test="${result == null}">
-			<button onclick='location.href="login.jsp";' class="login">로그인</button>
-		</c:if>
-		<c:if test = "${result != null}">
-			<button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
-			<button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
-		</c:if>
-	</nav>
+   <nav>
+      <c:if test="${result == null}">
+         <button onclick='location.href="login.jsp";' class="login">로그인</button>
+      </c:if>
+      <c:if test = "${result != null}">
+         <button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
+         <button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
+      </c:if>
+   </nav>
     <div class="menu-bar">
         <a href="studyKorean.jsp">
             <img src="images/smart_image/logo_background.png" class="menu-logo">
@@ -114,7 +114,7 @@
                 <span class="lecture-text">조회수 : 88</span>
             </div>
             <div class="lecture-item">
-                <img src="https://www.dolearn.ai/storage/uploads/thumbnail/430.jpg"><br>
+                <img src="images/smart_image/korea8.webp"><br>
                 <span class="lecture-text">신나는 문장 여행</span><br>
                 <span class="lecture-text">등록일 : 2024.03.03</span><br>
                 <span class="lecture-text">강사명 : 윤문법 선생님</span><br>
