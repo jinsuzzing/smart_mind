@@ -60,7 +60,6 @@
             <tbody id="calendar-body"></tbody>
         </table>
     </div>
-    
     <script src="assets/js/schedule.js"></script>
 </body>
 </html>
