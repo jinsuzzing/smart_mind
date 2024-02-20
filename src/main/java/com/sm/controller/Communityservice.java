@@ -40,7 +40,7 @@ public class Communityservice extends HttpServlet {
 			// 내용 저장이 성공 했다면, forward 방식 이동
 			request.setAttribute("member", dto);
 			System.out.println("작성 완료~!!");
-			RequestDispatcher rd = request.getRequestDispatcher("community.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("CommunityView");
 			rd.forward(request, response);
 
 		} else {
