@@ -42,7 +42,7 @@
                 <source src="./video/KakaoTalk_20240213_110856205.mp4" type="video/mp4">
             </video>
             <video id="myVideo" controls>
-                <source src="./video/KakaoTalk_20240213_110856205.mp4" type="video/mp4">
+                <source src="./video/KakaoTalk_20240221_112437288.mp4" type="video/mp4">
             </video>
         </div>
 

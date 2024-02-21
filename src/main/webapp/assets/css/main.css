@@ -10,12 +10,6 @@ font-family: 'NPSfontBold';
 }
 
 /* style.css */
-.login-button-container {
-  position: absolute; /* 절대 위치 */
-  top: 20px; /* 상단에서 0px 떨어진 위치 */
-  right: 40px; /* 우측에서 0px 떨어진 위치 */
-  padding: 10px; /* 내부 여백 추가 */
-}
 
 .login-button {
   background-color: #D2003F; /* 배경색 설정 */
