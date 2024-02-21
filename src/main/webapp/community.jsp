@@ -42,27 +42,36 @@
 						</tr>
 					</thead>
 					<tbody>
-					
 						<tr>
-							<td>3</td>
+							<td>1</td>
+							<th><a href="#!">공지사항 안내입니다.</a></th>
+							<td>2024-02-05 10:36:47.0</td>
+						</tr>
+						
+						<tr>
+							<td>2</td>
 							<th><a href="#!">[공지사항] 개인정보 처리방침 변경안내처리방침</a>
 								<p>테스트</p></th>
-							<td>2017.07.13</td>
+							<td>2024-02-10 05:26:57.0</td>
 						</tr>
-
+						<%int a = 2; %>
 						<c:forEach items="${resultList}" var="mdto">
 							<tr>
+								<td><%
+									  a += 1;
+									  out.print(a);
+									%></td>
 								<th><a href="#!">${mdto.post_title}</a>
 								<p>${mdto.mem_id}</p></th>
 								<td>${mdto.created_at}</td>
 							</tr>
 						</c:forEach>
+					
+
+
 						
-						<tr>
-							<td>1</td>
-							<th><a href="#!">공지사항 안내입니다.</a></th>
-							<td>2017.06.15</td>
-						</tr>
+						
+						
 					</tbody>
 				</table>
 			</div>
