@@ -27,7 +27,7 @@
 
       <h2 class="lecture-title">● 오늘의 학습분석 데이터</h2>
       <div class="lecture-item">
-         <span class="lecture-text"> <span class="highlight">진수님</span>
+         <span class="lecture-text"> <span class="highlight">${result.mem_id}</span>
             께서는 오늘 <span class="highlight">06시간</span> 학습하였습니다.
          </span> <br> <span class="lecture-text">오늘 학습시간중 <span
             class="highlight">04시간</span>부터 <span class="blacktext">집중력이

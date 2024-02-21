@@ -144,5 +144,16 @@ public class DAO {
 		return resultList;
 	}
 	
+	public MemberDTO analyze(MemberDTO dto) {
+		// 1. 연결 객체 빌려오기
+		SqlSession sqlSession = factory.openSession();
+		// 2. 연결객체 사용해서 sql 구문 실행
+		// sql구문 --> mapper.xml
+		MemberDTO result = sqlSession.selectOne("analyze", dto);
+		// 3. 연결객체 반납
+		sqlSession.close();
+		return result;
+	}
+	
 
 }

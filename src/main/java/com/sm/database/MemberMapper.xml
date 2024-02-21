@@ -20,7 +20,7 @@
 
 	<select id="login" parameterType="com.sm.model.MemberDTO"
 		resultType="com.sm.model.MemberDTO">
-		SELECT mem_id, mem_name, mem_type FROM tb_member WHERE mem_id = #{mem_id}
+		SELECT mem_id, mem_name, mem_name FROM tb_member WHERE mem_id = #{mem_id}
 		AND mem_pw = #{mem_pw}
 	</select>
 
@@ -67,6 +67,18 @@
         INSERT INTO tb_schedule (SCHE_SEQ, MEM_ID, SCHE_NAME, SCHE_CONTENT, STARTED_AT, ENDED_AT, SCHE_TYPE, SCHE_COLOR, DAILY_SEQ)
         VALUES (TB_SCHEDULE_SEQ.NEXTVAL, #{mem_id}, #{sche_name}, #{sche_content}, #{started_at}, #{ended_at}, #{sche_type}, #{sche_color}, #{daily_seq})
     </insert>
+    
+    <select id="analyze" parameterType="com.sm.model.MemberDTO"
+		resultType="com.sm.model.MemberDTO">
+		SELECT B.MEM_NAME, A.* FROM TB_ATITUDE A, TB_MEMBER B
+		WHERE A.MEM_ID = B.MEM_ID;
+	</select>
+	
+	<select id="scheduleView" resultType="com.sm.model.MemberDTO">
+    SELECT SCHE_SEQ, MEM_ID, SCHE_NAME, SCHE_CONTENT, STARTED_AT, ENDED_AT, SCHE_TYPE, SCHE_COLOR, DAILY_SEQ
+    FROM tb_schedule
+    ORDER BY STARTED_AT DESC
+	</select>
 
 
 </mapper>
