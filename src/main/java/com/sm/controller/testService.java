@@ -1,6 +1,7 @@
 package com.sm.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -50,9 +51,19 @@ public class testService extends HttpServlet {
 		if (row > 0) {
 			// 내용 저장이 성공 했다면, forward 방식 이동
 			request.setAttribute("test", dto);
-			System.out.println("row : "+row);
-			RequestDispatcher rd = request.getRequestDispatcher("studyKorean.jsp");
+			
+			// 2. DAO에서 모든 회원 조회하는 기능 사용
+			DAO dao2 = new DAO();
+			MemberDTO dto2 = dao2.analyze(dto);
+			
+			// 3. request scope에 전체 회원정보를 담아주기
+			request.setAttribute("analyze", dto2);
+			System.out.println("dto2 : "+dto2);
+			
+			// 4. select.jsp로 foward 방식으로 이동
+			RequestDispatcher rd = request.getRequestDispatcher("study_analyze.jsp");
 			rd.forward(request, response);
+			
 
 		} else {
 			// 실패 했다면 다시 글작성 페이지로 이동(redirect 방식으로 이동)

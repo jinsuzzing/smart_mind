@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,11 +29,12 @@
 
       <h2 class="lecture-title">● 오늘의 학습분석 데이터</h2>
       <div class="lecture-item">
-         <span class="lecture-text"> <span class="highlight">${result.mem_id}</span>
-            께서는 오늘 <span class="highlight">06시간</span> 학습하였습니다.
-         </span> <br> <span class="lecture-text">오늘 학습시간중 <span
-            class="highlight">04시간</span>부터 <span class="blacktext">집중력이
-               저하</span> 되었습니다.
+         <span class="lecture-text"> <span class="highlight">${analyze.mem_name}</span>
+            께서는 오늘 <span class="highlight">${analyze.watch_time}</span>분 공부하셨습니다.
+         </span> <br> <span class="lecture-text">오늘 학습시간중 졸은시간은<span
+            class="highlight">${analyze.sleep}</span>분, 이탈 시간은
+            <span class="highlight">${analyze.leave}</span>분, 바르지 않은 자세는
+            <span class="highlight">${analyze.pose}</span>분 입니다.
          </span> <br> <span class="ai_comment" id="randomComment"></span>
       </div>
 
@@ -66,7 +69,13 @@
             <tbody>
             <tr>
                   <td>1번 문제</td>
-                  <th><a href="#!">정답입니다!!</a></th>
+                  <c:if test="${test.test_corr=='1'}">
+                  	<th>정답입니다!!</th>
+    			  </c:if>
+    			  <c:if test="${test.test_corr=='0'}">
+                  	<th>오답입니다.</th>
+    			  </c:if>
+                  
                </tr>
                <tr>
                   <td>2번 문제</td>
@@ -115,7 +124,7 @@
       var myChart = new Chart(ctx, {
          type : 'line', // 차트의 종류를 'line'으로 변경
          data : {
-            labels : [ '1시간', '2시간', '3시간', '4시간', '5시간', '6시간' ], // X축 라벨
+            labels : [ '1', '2', '3', '4', '5', '6' ], // X축 라벨
             datasets : [ {
                label : '# of Votes', // 데이터셋의 라벨
                data : [ 50, 90, 75, 70, 40, 10 ], // Y축 데이터

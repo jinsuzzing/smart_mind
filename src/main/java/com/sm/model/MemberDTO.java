@@ -53,5 +53,12 @@ public class MemberDTO {
 	private String mem_answer;
 	private String test_corr;
 	
+	private String atd_seq;
+	private String subj_seq;
+	private String watch_time;
+	private String sleep;
+	private String leave;
+	private String pose;
+	
 
 }

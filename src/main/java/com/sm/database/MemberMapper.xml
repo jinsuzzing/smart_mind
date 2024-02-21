@@ -70,8 +70,9 @@
     
     <select id="analyze" parameterType="com.sm.model.MemberDTO"
 		resultType="com.sm.model.MemberDTO">
-		SELECT B.MEM_NAME, A.* FROM TB_ATITUDE A, TB_MEMBER B
-		WHERE A.MEM_ID = B.MEM_ID;
+		SELECT B.MEM_NAME, A.* 
+		FROM TB_ATITUDE A, TB_MEMBER B
+		WHERE A.MEM_ID = #{mem_id} AND A.MEM_ID = B.MEM_ID
 	</select>
 	
 	<select id="scheduleView" resultType="com.sm.model.MemberDTO">
