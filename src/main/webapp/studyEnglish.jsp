@@ -24,7 +24,7 @@
       </c:if>
    </nav>
     <div class="menu-bar">
-        <a href="main.jsp">
+        <a href="studyKorean.jsp">
             <img src="images/smart_image/logo_background.png" class="menu-logo">
         </a>
         <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>
