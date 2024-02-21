@@ -52,7 +52,7 @@ function onDateClick(event) {
         })
         .then(response => response.text()) // 응답을 텍스트로 변환
         .then(data => {
-            console.log(data); // 서버로부터의 응답을 콘솔에 출력
+            // console.log(data); // 서버로부터의 응답을 콘솔에 출력
             // 여기에 성공 처리 로직을 추가할 수 있습니다. 예: 페이지 새로고침, 사용자에게 성공 메시지 표시 등
         })
         .catch(error => console.error('Error:', error)); // 오류 처리
@@ -84,13 +84,16 @@ document.getElementById("next-month").addEventListener("click", () => {
 // 달력에 DB에서 가져온 스케줄을 표시하는 함수입니다.
 function fetchScheduleAndDisplay() {
     fetch("ScheduleViewService") // 서블릿 URL에 맞게 수정
+    
     .then(response => response.json())
     .then(schedules => {
+		console.log("Received data:", schedules);
         schedules.forEach(schedule => {
             const formattedDate = convertDateFormat(schedule.started_at); // 필요에 따라 날짜 형식 조정
             const cell = document.querySelector(`#calendar-body td[data-date="${formattedDate}"]`);
+			console.log("cell : ", cell);
             if (cell) {
-                cell.innerHTML += `<div>${schedule.sche_content}</div>`; // 스케줄 내용 추가
+                cell.innerHTML+= `<p>${schedule.sche_content}</p>`; // 스케줄 내용 추가
             }
         });
     })
@@ -104,20 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function convertDateFormat(dateStr) {
-    // 날짜 형식 YY/MM/DD를 YYYY-MM-DD로 변환
-    const parts = dateStr.split("/"); // 날짜를 '/' 기준으로 분리
-    let year = parseInt(parts[0], 10);
-    const month = parts[1];
-    const day = parts[2];
-
-    // 2000년 이후로 가정하고, 년도에 2000을 더함
-    // YY가 70보다 클 경우 1900년대, 아니면 2000년대로 가정할 수 있습니다(필요에 따라 조정)
-    if (year < 70) {
-        year += 2000;
-    } else {
-        year += 1900;
-    }
-
-    // YYYY-MM-DD 형식으로 변환
-    return `${year}-${month}-${day}`;
+    const parts = dateStr.split(" ")[0]; // " " 공백 문자를 기준으로 날짜와 시간을 분리하고, 날짜 부분만 추출
+    return parts; // "YYYY-MM-DD" 형식의 날짜 문자열 반환
 }
