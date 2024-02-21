@@ -37,7 +37,7 @@
             <span class="highlight">${analyze.pose}</span>분 입니다.
          </span> <br> <span class="ai_comment" id="randomComment"></span>
       </div>
-
+	
    </div>
    <br>
    <br>
@@ -159,15 +159,16 @@
          }
       });
    </script>
-   <script>
+   <script type="text/javascript">
+   
       const ctx2 = document.getElementById('mySecondChart').getContext('2d');
       const mySecondChart = new Chart(ctx2, {
          type : 'pie', // 차트의 타입을 'pie'로 설정
          data : {
-            labels : [ '집중한 시간', '집중못한 시간' ],
+            labels : ['집중' ,'안집중' ],
             datasets : [ {
                label : 'Your Label Here',
-               data : [ 70, 30 ], // 데이터
+               data : [ ${watch_time}, ${sleep} ], // 데이터
                backgroundColor : [ 'rgb(255,84,133)', // 집중한 시간
                'rgb(230,230,230)', // (집중 못한 시간)
                ],

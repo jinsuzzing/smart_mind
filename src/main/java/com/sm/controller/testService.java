@@ -1,6 +1,7 @@
 package com.sm.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -9,7 +10,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
+import com.google.gson.Gson;
 import com.sm.model.DAO;
 import com.sm.model.MemberDTO;
 
@@ -24,7 +28,7 @@ public class testService extends HttpServlet {
 		
 		// 1. 한글 인코딩
 		request.setCharacterEncoding("UTF-8");
-
+        
 		// 2. 요청데이터 꺼내오기 (작성자id , 글제목 , 글내용 )
 		String mem_id = request.getParameter("mem_id");
 		String test_answer = request.getParameter("test_answer");
@@ -47,8 +51,12 @@ public class testService extends HttpServlet {
 		DAO dao = new DAO();
 		// dao.join을 사용하여 글쓴이 , 글제목 , 글내용 저장
 		int row = dao.test(dto);
+		
+		
 
 		if (row > 0) {
+			
+			
 			// 내용 저장이 성공 했다면, forward 방식 이동
 			request.setAttribute("test", dto);
 			
@@ -64,7 +72,11 @@ public class testService extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("study_analyze.jsp");
 			rd.forward(request, response);
 			
-
+			request.setAttribute("watch_time", dto2.getWatch_time());
+			request.setAttribute("sleep", dto2.getSleep());
+			request.setAttribute("leave", dto2.getLeave());
+			request.setAttribute("pose", dto2.getPose());
+			
 		} else {
 			// 실패 했다면 다시 글작성 페이지로 이동(redirect 방식으로 이동)
 			response.sendRedirect("community_write.jsp");
