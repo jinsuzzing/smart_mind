@@ -29,7 +29,7 @@
     <ul class="menu-list">
       <li><a href="studyKorean.jsp">● 공부하러 가기!</a></li>
       <li><a href="schedule.jsp">● 스케줄 관리</a></li>
-      <li><a href="comunity.jsp">● 커뮤니티</a></li>
+      <li><a href="community.jsp">● 커뮤니티</a></li>
       <li><a href="notice.jsp">● 공지사항</a></li>
     </ul>
   </div>

@@ -19,7 +19,7 @@
         </a>
         <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>
         <a href="schedule.jsp" class="menu-item">스케줄관리</a>
-        <a href="comunity.jsp" class="menu-item">커뮤니티</a>
+        <a href="community.jsp" class="menu-item">커뮤니티</a>
         <a href="notice.jsp" class="menu-item">공지사항</a>
     </div>
     <br>
