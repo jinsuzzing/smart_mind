@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    buildCalendar(new Date().getFullYear(), new Date().getMonth());
+    fetchScheduleAndDisplay();
+});
 // 달력을 구성하고 초기화하는 함수입니다.
 function buildCalendar(year = new Date().getFullYear(), month = new Date().getMonth()) {
     const firstDay = new Date(year, month, 1).getDay(); // 해당 월의 첫 번째 날의 요일 인덱스를 가져옵니다.
@@ -32,33 +36,61 @@ function buildCalendar(year = new Date().getFullYear(), month = new Date().getMo
     }
 
     document.getElementById("calendar-month-year").innerText = `${year}년 ${month + 1}월`; // 현재 연도와 월을 표시합니다.
+    // 각 날짜 셀에 대해 클릭 이벤트 리스너 등록
+    document.querySelectorAll("#calendar-body td").forEach(td => {
+        td.addEventListener("click", onDateClick);
+    });
 }
 
 
 // 달력의 날짜를 클릭했을 때 실행되는 함수입니다.
 function onDateClick(event) {
     const selectedDate = event.target.getAttribute('data-date'); // 선택된 날짜를 data-date 속성에서 가져옵니다.
-    const schedule = prompt("스케줄을 입력하세요:", ""); // 사용자에게 스케줄 입력을 요청합니다.
-    if (schedule) {
-        console.log(`날짜: ${selectedDate}, 스케줄: ${schedule}`); // 콘솔에 날짜와 스케줄을 출력합니다.
+    const scheduleContent = prompt("스케줄을 입력하세요:", ""); // 사용자에게 스케줄 입력을 요청합니다.
+    if (!scheduleContent) return; // 스케줄 내용이 없으면 종료
 
-        // 서버로 스케줄 데이터를 전송합니다.
-        fetch('scheduleAdd', { // 서블릿 URL에 맞게 수정하세요.
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded', // 컨텐트 타입 설정
-            },
-            body: `schedule=${encodeURIComponent(schedule)}&selectedDate=${encodeURIComponent(selectedDate)}` // 데이터 인코딩
-        })
-        .then(response => response.text()) // 응답을 텍스트로 변환
-        .then(data => {
-            // console.log(data); // 서버로부터의 응답을 콘솔에 출력
-            // 여기에 성공 처리 로직을 추가할 수 있습니다. 예: 페이지 새로고침, 사용자에게 성공 메시지 표시 등
-        })
-        .catch(error => console.error('Error:', error)); // 오류 처리
-    }
+    console.log(`날짜: ${selectedDate}, 스케줄: ${scheduleContent}`); // 콘솔에 날짜와 스케줄을 출력합니다.
+
+    // 서버로 스케줄 데이터를 전송합니다.
+    fetch('scheduleAdd', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: `schedule=${encodeURIComponent(scheduleContent)}&selectedDate=${encodeURIComponent(selectedDate)}`
+    })
+    .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+    })
+    .then(() => {
+        updateCalendarCell(selectedDate, scheduleContent); // 성공적으로 추가된 후 화면에 바로 반영
+    })
+    .catch(error => console.error('Error:', error));
 }
+function updateCalendarCell(date, content) {
+    const cell = document.querySelector(`#calendar-body td[data-date="${date}"]`);
+    if (!cell) return;
 
+    // 스케줄 내용과 삭제 버튼을 담을 div 생성
+    const scheduleDiv = document.createElement("div");
+    scheduleDiv.classList.add("schedule-item");
+
+    // 스케줄 텍스트 추가
+    const textNode = document.createTextNode(content);
+    scheduleDiv.appendChild(textNode);
+
+    // 삭제 버튼 추가
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "X";
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.onclick = function() {
+        // 스케줄 삭제 로직
+        cell.removeChild(scheduleDiv);
+        // 여기서 서버에 삭제 요청을 보내는 코드를 추가할 수 있습니다.
+    };
+    scheduleDiv.appendChild(deleteBtn);
+
+    cell.appendChild(scheduleDiv);
+}
 // 이전 달과 다음 달로 이동하는 버튼에 이벤트 리스너를 추가합니다.
 let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth();
@@ -83,23 +115,29 @@ document.getElementById("next-month").addEventListener("click", () => {
 
 // 달력에 DB에서 가져온 스케줄을 표시하는 함수입니다.
 function fetchScheduleAndDisplay() {
-    fetch("ScheduleViewService") // 서블릿 URL에 맞게 수정
-    
+    fetch("ScheduleViewService")
     .then(response => response.json())
     .then(schedules => {
-		console.log("Received data:", schedules);
+        console.log("Received data:", schedules);
         schedules.forEach(schedule => {
-            const formattedDate = convertDateFormat(schedule.started_at); // 필요에 따라 날짜 형식 조정
+            const formattedDate = convertDateFormat(schedule.started_at);
             const cell = document.querySelector(`#calendar-body td[data-date="${formattedDate}"]`);
-			console.log("cell : ", cell);
-            if (cell) {
-                cell.innerHTML+= `<p>${schedule.sche_content}</p>`; // 스케줄 내용 추가
+            if (!cell) return; // 해당 날짜의 셀이 없으면 종료
+
+            // 스케줄 내용을 담을 div를 찾거나 새로 생성
+            let scheduleDiv = cell.querySelector(".schedule-content");
+            if (!scheduleDiv) {
+                scheduleDiv = document.createElement("div");
+                scheduleDiv.classList.add("schedule-content");
+                cell.appendChild(scheduleDiv);
             }
+
+            // 스케줄 내용 업데이트
+            scheduleDiv.textContent = schedule.sche_content;
         });
     })
     .catch(error => console.error('Error fetching schedule:', error));
 }
-
 document.addEventListener('DOMContentLoaded', function() {
     buildCalendar(new Date().getFullYear(), new Date().getMonth());
     fetchScheduleAndDisplay(); // 페이지 로딩 시 스케줄 정보 가져오기
