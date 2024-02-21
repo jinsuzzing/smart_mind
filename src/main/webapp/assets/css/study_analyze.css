@@ -10,8 +10,116 @@
 * {
    font-family: 'NPSfontBold';
 }
+/* 메뉴바 스타일 */
+.login-button-container {
+  position: absolute; /* 절대 위치 */
+  top: 20px; /* 상단에서 0px 떨어진 위치 */
+  right: 40px; /* 우측에서 0px 떨어진 위치 */
+  padding: 10px; /* 내부 여백 추가 */
+}
 
-;
+.menu-bar {
+    margin-top: 70px;
+    margin-left: 30px;
+    background-color: #D2003F;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    align-items: center;
+}
+      
+              /* 메뉴 항목 스타일 */
+              .menu-item {
+                  display: flex;
+                  color: #FFFFFF;
+                  font-weight: bold;
+                  font-size: x-large;
+                  margin-left: 200px;
+                  position: relative;
+                  margin-right: 20px;
+                  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+      
+      
+              }
+      
+              /* 메뉴 항목 호버 효과 */
+              .menu-item:hover {
+                  text-decoration: underline;
+              }
+      
+              /* 메뉴 로고 스타일 */
+              .menu-logo {
+                  position: absolute;
+                  left: 20px;
+                  top: 50px;
+              }
+      
+              a{
+               text-decoration: none; /* 밑줄 제거 */
+              }
+
+.welcome{
+	  position: absolute; /* 절대 위치 지정 */
+      top: 30px; /* 상단에서 30px 떨어진 위치 */
+      right: 350px; /* 우측에서 20px 떨어진 위치 */
+      color: #D2003F; /* 글씨색 */
+      font-weight: bold; /* 글씨 굵게 */
+      margin-bottom: 20px;
+      font-size: 23px;
+}
+/* 로그인 버튼 스타일 */
+button.login {
+    position: absolute; /* 절대 위치 지정 */
+    top: 20px; /* 상단에서 20px 떨어진 위치 */
+    right: 20px; /* 우측에서 20px 떨어진 위치 */
+    padding: 10px 20px; /* 내부 여백 */
+    background-color: white; /* 배경색 */
+    color: #D2003F; /* 글씨색 */
+    border-color: #D2003F; /* 테두리 색상 지정 */
+    border-width: 3px; /* 테두리 두께 */
+    border-style: solid; /* 테두리 스타일 solid로 설정 */
+    border-radius: 30px; /* 모서리 둥글게 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    font-weight: bold; /* 글씨 굵게 */
+    transition: background-color 0.3s; /* 배경색 변경 효과 */
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+button.update {
+    position: absolute; /* 절대 위치 지정 */
+    top: 20px; /* 상단에서 20px 떨어진 위치 */
+    right: 160px; /* 우측에서 20px 떨어진 위치 */
+    padding: 10px 20px; /* 내부 여백 */
+    background-color: white; /* 배경색 */
+    color: #D2003F; /* 글씨색 */
+    border-color: #D2003F; /* 테두리 색상 지정 */
+    border-width: 3px; /* 테두리 두께 */
+    border-style: solid; /* 테두리 스타일 solid로 설정 */
+    border-radius: 30px; /* 모서리 둥글게 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    font-weight: bold; /* 글씨 굵게 */
+    transition: background-color 0.3s; /* 배경색 변경 효과 */
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+button.logout {
+    position: absolute; /* 절대 위치 지정 */
+    top: 20px; /* 상단에서 20px 떨어진 위치 */
+    right: 20px; /* 우측에서 20px 떨어진 위치 */
+    padding: 10px 20px; /* 내부 여백 */
+    background-color: white; /* 배경색 */
+    color: #D2003F; /* 글씨색 */
+    border-color: #D2003F; /* 테두리 색상 지정 */
+    border-width: 3px; /* 테두리 두께 */
+    border-style: solid; /* 테두리 스타일 solid로 설정 */
+    border-radius: 30px; /* 모서리 둥글게 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    font-weight: bold; /* 글씨 굵게 */
+    transition: background-color 0.3s; /* 배경색 변경 효과 */
+    margin-bottom: 20px;
+    font-size: 20px;
+}
 
 .lecture-container {
    text-align: left;

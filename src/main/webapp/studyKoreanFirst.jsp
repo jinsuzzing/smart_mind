@@ -9,25 +9,28 @@
     <title>배너 메뉴 페이지</title>
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/studyKoreanFirst.css">
+    <link rel="stylesheet" href="assets/css/studyKorean.css">
 </head>
  
 <body>
-	<nav>
-		<c:if test="${result == null}">
-			<button onclick='location.href="login.jsp";' class="login">로그인</button>
-		</c:if>
-		<c:if test = "${result != null}">
-			<button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
-			<button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
-		</c:if>
-	</nav>
+	   <nav>
+      <c:if test="${result == null}">
+         <button onclick='location.href="login.jsp";' class="login">로그인</button>
+      </c:if>
+      
+      <c:if test = "${result != null}">
+      <span class="welcome">${mem_id}님 환영합니다~</span>
+         <button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
+         <button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
+      </c:if>
+   </nav>
     <div class="menu-bar">
         <a href="studyKorean.jsp">
             <img src="images/smart_image/logo_background.png" class="menu-logo">
         </a>
         <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>
         <a href="schedule.jsp" class="menu-item">스케줄관리</a>
-        <a href="community.jsp" class="menu-item">커뮤니티</a>
+        <a href="CommunityView" class="menu-item">커뮤니티</a>
         <a href="notice.jsp" class="menu-item">공지사항</a>
     </div>
     <div class="button-container">

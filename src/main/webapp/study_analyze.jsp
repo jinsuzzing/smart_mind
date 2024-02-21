@@ -1,7 +1,7 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,91 +14,105 @@
 </head>
 
 <body>
-   <div class="menu-bar">
-      <a href="main.jsp"> <img
-         src="images/smart_image/logo_background.png" class="menu-logo">
-      </a> <a href="studyKorean.jsp" class="menu-item">공부하러가기</a> <a
-         href="schedule.jsp" class="menu-item">스케줄관리</a> <a
-         href="community.jsp" class="menu-item">커뮤니티</a> <a href="notice.jsp"
-         class="menu-item">공지사항</a>
-   </div>
-   <br>
-   <br>
-   <br>
-   <div class="lecture-container">
 
-      <h2 class="lecture-title">● 오늘의 학습분석 데이터</h2>
-      <div class="lecture-item">
-         <span class="lecture-text"> <span class="highlight">${analyze.mem_name}</span>
-            께서는 오늘 <span class="highlight">${analyze.watch_time}</span>분 공부하셨습니다.
-         </span> <br> <span class="lecture-text">오늘 학습시간중 졸은시간은<span
-            class="highlight">${analyze.sleep}</span>분, 이탈 시간은
-            <span class="highlight">${analyze.leave}</span>분, 바르지 않은 자세는
-            <span class="highlight">${analyze.pose}</span>분 입니다.
-         </span> <br> <span class="ai_comment" id="randomComment"></span>
-      </div>
-	
-   </div>
-   <br>
-   <br>
-   <br>
-   <h2 class="lecture-title">● 분석데이터 상세보기</h2>
-   <br>
-   <br>
-   <br>
-   <div class="chart-container">
+	<body>
+	<nav>
+      <c:if test="${result == null}">
+         <button onclick='location.href="login.jsp";' class="login">로그인</button>
+      </c:if>
+      <c:if test="${result != null}">
+      <span class="welcome">${mem_id}님 환영합니다~</span>
+         <button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
+         <button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
+      </c:if>
+   </nav>
+    <div class="menu-bar">
+        <a href="studyKorean.jsp">
+            <img src="images/smart_image/logo_background.png"
+			class="menu-logo">
+        </a>
+        <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>
+        <a href="schedule.jsp" class="menu-item">스케줄관리</a>
+        <a href="CommunityView" class="menu-item">커뮤니티</a>
+        <a href="notice.jsp" class="menu-item">공지사항</a>
+    </div><br>
+	<br>
+	<br>
+	<div class="lecture-container">
 
-      <!-- 차트를 그릴 캔버스 요소추가 -->
-      <canvas id="myChart"></canvas>
-      <canvas id="mySecondChart"></canvas>
+		<h2 class="lecture-title">● 오늘의 학습분석 데이터</h2>
+		<div class="lecture-item">
+			<span class="lecture-text"> <span class="highlight">${analyze.mem_name}</span>
+				께서는 오늘 <span class="highlight">${analyze.watch_time}</span>분
+				공부하셨습니다.
+			</span> <br> <span class="lecture-text">오늘 학습시간중 졸은시간은<span
+				class="highlight">${analyze.sleep}</span>분, 이탈 시간은 <span
+				class="highlight">${analyze.leave}</span>분, 바르지 않은 자세는 <span
+				class="highlight">${analyze.pose}</span>분 입니다.
+			</span> <br> <span class="ai_comment" id="randomComment"></span>
+		</div>
 
-   </div>
-   <br>
-   <br>
-   <br>
-<h2 class="lecture-title">● 테스트 문제 채점결과</h2>
-   <div id="board-list">
-      <div class="container">
-         <table class="board-table">
-            <thead>
-               <tr>
-                  <th scope="col" class="th-num">문항</th>
-                  <th scope="col" class="th-title">채점결과</th>
-               </tr>
-            </thead>
-            <tbody>
-            <tr>
-                  <td>1번 문제</td>
-                  <c:if test="${test.test_corr=='1'}">
-                  	<th>정답입니다!!</th>
-    			  </c:if>
-    			  <c:if test="${test.test_corr=='0'}">
-                  	<th>오답입니다.</th>
-    			  </c:if>
-                  
-               </tr>
-               <tr>
-                  <td>2번 문제</td>
-                  <th><a href="#!"></a></th>
-               </tr>
-                              <tr>
-                  <td>3번 문제</td>
-                  <th><a href="#!"></a></th>
-               </tr>
-               <tr>
-                  <td>4번 문제</td>
-                  <th><a href="#!"></a></th>
-               </tr>
-               
+	</div>
+	<br>
+	<br>
+	<br>
+	<h2 class="lecture-title">● 분석데이터 상세보기</h2>
+	<br>
+	<br>
+	<br>
+	<div class="chart-container">
+
+		<!-- 차트를 그릴 캔버스 요소추가 -->
+		<canvas id="myChart"></canvas>
+		<canvas id="mySecondChart"></canvas>
+
+	</div>
+	<br>
+	<br>
+	<br>
+	<h2 class="lecture-title">● 테스트 문제 채점결과</h2>
+	<div id="board-list">
+		<div class="container">
+			<table class="board-table">
+				<thead>
+					<tr>
+						<th scope="col" class="th-num">문항</th>
+						<th scope="col" class="th-title">채점결과</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1번 문제</td>
+						<c:if test="${test.test_corr=='1'}">
+							<th>정답입니다!!</th>
+						</c:if>
+						<c:if test="${test.test_corr=='0'}">
+							<th>오답입니다.</th>
+						</c:if>
+
+					</tr>
+					<tr>
+						<td>2번 문제</td>
+						<th><a href="#!"></a></th>
+					</tr>
+					<tr>
+						<td>3번 문제</td>
+						<th><a href="#!"></a></th>
+					</tr>
+					<tr>
+						<td>4번 문제</td>
+						<th><a href="#!"></a></th>
+					</tr>
 
 
 
-            </tbody>
-         </table>
-      </div>
-   </div>
 
-   <script>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script>
       //AI의 집중도 상승 꿀팁 랜덤값으로 출력
       document
             .addEventListener(
@@ -118,7 +132,7 @@
                      document.getElementById('randomComment').textContent = randomComment;
                   });
    </script>
-   <script>
+	<script>
       // 차트 출력 스크립트
       var ctx = document.getElementById('myChart').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -159,7 +173,7 @@
          }
       });
    </script>
-   <script type="text/javascript">
+	<script type="text/javascript">
    
       const ctx2 = document.getElementById('mySecondChart').getContext('2d');
       const mySecondChart = new Chart(ctx2, {
@@ -182,4 +196,6 @@
       });
    </script>
 </body>
+
+
 </html>
