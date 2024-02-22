@@ -91,6 +91,7 @@ transition: background-color 0.3s; /* 배경색 변경 효과 */
 margin-bottom: 20px;
 font-size: 20px;
 }
+
 button.logout {
     position: absolute; /* 절대 위치 지정 */
     top: 20px; /* 상단에서 20px 떨어진 위치 */
