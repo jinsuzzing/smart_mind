@@ -151,6 +151,17 @@ public class DAO {
 		return result;
 	}
 	
-	
+	// 스케줄 삭제 메소드
+    public int deleteSchedule(int sche_seq) {
+        SqlSession sqlSession = factory.openSession(true); // 자동 커밋 활성화
+        try {
+            int result = sqlSession.delete("deleteSchedule", sche_seq); // 스케줄 삭제 실행
+            return result; // 삭제된 행의 개수 반환
+        } finally {
+            if (sqlSession != null) {
+                sqlSession.close(); // 세션 닫기
+            }
+        }
+    }
 
 }

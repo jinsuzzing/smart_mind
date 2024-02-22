@@ -81,7 +81,9 @@
     ORDER BY STARTED_AT DESC
 	</select>
 	
-	
-
+	<delete id="deleteSchedule" parameterType="int">
+    DELETE FROM tb_schedule
+    WHERE sche_seq = #{sche_seq}
+	</delete>
 
 </mapper>
