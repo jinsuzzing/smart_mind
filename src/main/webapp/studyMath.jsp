@@ -18,6 +18,7 @@
          <button onclick='location.href="login.jsp";' class="login">로그인</button>
       </c:if>
       <c:if test = "${result != null}">
+      <span class="welcome">${result.mem_name}님 환영합니다~</span>
          <button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
          <button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
       </c:if>
