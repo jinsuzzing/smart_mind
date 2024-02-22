@@ -85,5 +85,11 @@
     DELETE FROM tb_schedule
     WHERE sche_seq = #{sche_seq}
 	</delete>
+	
+	<select id="selectUserDetails" resultType="com.sm.model.MemberDTO">
+    SELECT WATCH_TIME, SLEEP, LEAVE, POSE
+    FROM TB_ATITUDE
+    WHERE mem_id = #{mem_id}
+	</select>
 
 </mapper>

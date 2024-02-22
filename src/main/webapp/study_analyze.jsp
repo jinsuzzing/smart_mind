@@ -1,3 +1,5 @@
+<%@ page import="com.sm.model.MemberDTO" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -173,7 +175,14 @@
       });
    </script>
 	<script type="text/javascript">
-   
+	
+	<% MemberDTO analyze = (MemberDTO) request.getAttribute("analyze"); %>
+	var watchTime = <%= analyze.getWatch_time() %>;
+	var sleepTime = <%= analyze.getSleep() %>;
+	var leaveTime = <%= analyze.getLeave() %>;
+	var poseTime = <%= analyze.getPose() %>;
+	const focusedTime = watchTime - (sleepTime + leaveTime + poseTime);
+	const NotFocusedTime = sleepTime + leaveTime + poseTime
       const ctx2 = document.getElementById('mySecondChart').getContext('2d');
       const mySecondChart = new Chart(ctx2, {
          type : 'pie', // 차트의 타입을 'pie'로 설정
@@ -181,7 +190,7 @@
             labels : ['집중' ,'안집중' ],
             datasets : [ {
                label : 'Your Label Here',
-               data : [ ${watch_time}, ${sleep} ], // 데이터
+               data: [focusedTime, NotFocusedTime], // 데이터
                backgroundColor : [ 'rgb(255,84,133)', // 집중한 시간
                'rgb(230,230,230)', // (집중 못한 시간)
                ],
