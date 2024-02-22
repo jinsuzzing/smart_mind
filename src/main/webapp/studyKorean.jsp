@@ -9,7 +9,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Page</title>
-    <link rel="stylesheet" href="assets/css/studyKorean.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="assets/css/studyKorean.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+     <!-- CSS 파일 연결 -->
 </head>
 
 <body>

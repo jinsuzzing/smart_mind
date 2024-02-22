@@ -1,3 +1,16 @@
+@charset "UTF-8";
+
+@font-face {
+   font-family: 'NPSfontBold';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+   font-weight: 700;
+   font-style: normal;
+}
+
+* {
+   font-family: 'NPSfontBold';
+}
+
 .middle{
     display: block;
     margin: 100px;
@@ -19,15 +32,6 @@ p{
     font-size: 20px;
     font-weight: bold;
 }
-.welcome{
-	  position: absolute; /* 절대 위치 지정 */
-      top: 30px; /* 상단에서 30px 떨어진 위치 */
-      right: 350px; /* 우측에서 20px 떨어진 위치 */
-      color: #D2003F; /* 글씨색 */
-      font-weight: bold; /* 글씨 굵게 */
-      margin-bottom: 20px;
-      font-size: 23px;
-}
 
 
 
@@ -44,7 +48,7 @@ label {
 }
 
 /* 정답 제출 버튼 스타일링 */
-button {
+.writeOk {
     display: block; /* 버튼을 블록 요소로 만들어 줄 바꿈 */
     width: 200px; /* 버튼 너비 */
     padding: 15px 0; /* 버튼 상하 패딩 */
@@ -58,7 +62,7 @@ button {
     transition: background-color 0.3s; /* 배경색 변경 효과 */
 }
 
-button:hover {
+.writeOk:hover {
     background-color: #f01b5b; /* 호버 시 배경색 변경 */
 }
 

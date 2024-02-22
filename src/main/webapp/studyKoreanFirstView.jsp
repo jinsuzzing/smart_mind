@@ -9,7 +9,6 @@
 <title>배너 메뉴 페이지</title>
 <link rel="stylesheet" href="assets/css/menu.css">
 <link rel="stylesheet" href="assets/css/studyKoreanFirstView.css">
-<link rel="stylesheet" href="assets/css/studyKorean.css">
 </head>
 
 <body>
