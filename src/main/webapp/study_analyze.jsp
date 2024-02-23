@@ -51,7 +51,7 @@
 			<span class="lecture-text">오늘 학습시간중 
 			<span class="black">졸은시간은</span>
 			<span class="highlight">${analyze.sleep}</span>분, 
-			
+			<span class="black">자리 이탈 시간은</span>
 			<span class="highlight">${analyze.leave}</span>분, 
 			<span class="black">바르지 않은 자세는</span>
 			<span class="highlight">${analyze.pose}</span>분 입니다.
