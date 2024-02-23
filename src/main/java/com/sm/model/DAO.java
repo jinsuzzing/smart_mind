@@ -2,6 +2,7 @@ package com.sm.model;
 
 import java.sql.ResultSet;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -137,6 +138,12 @@ public class DAO {
 	        sqlSession.close();
 	    }
 	}
+	
+	public List<MemberDTO> selectUserSchedules(String mem_id) {
+        try (SqlSession session = factory.openSession()) {
+            return session.selectList("selectUserSchedules", mem_id);
+        }
+    }
 
 
 	
@@ -152,15 +159,19 @@ public class DAO {
 	}
 	
 	// 스케줄 삭제 메소드
-    public int deleteSchedule(int sche_seq) {
-        SqlSession sqlSession = factory.openSession(true); // 자동 커밋 활성화
+	public boolean deleteSchedule(Map<String, Object> params) {
+        SqlSession sqlSession = factory.openSession();
         try {
-            int result = sqlSession.delete("deleteSchedule", sche_seq); // 스케줄 삭제 실행
-            return result; // 삭제된 행의 개수 반환
-        } finally {
-            if (sqlSession != null) {
-                sqlSession.close(); // 세션 닫기
+            int result = sqlSession.delete("com.sm.model.DAO.deleteSchedule", params);
+            if (result > 0) {
+                sqlSession.commit();
+                return true;
+            } else {
+                sqlSession.rollback();
+                return false;
             }
+        } finally {
+            sqlSession.close();
         }
     }
     public MemberDTO selectUserDetails(String mem_id) {
@@ -172,4 +183,14 @@ public class DAO {
             sqlSession.close();
         }
     }
+    public List<MemberDTO> scheduleViewByUserId(String mem_id) {
+        SqlSession sqlSession = factory.openSession();
+        try {
+            List<MemberDTO> scheduleList = sqlSession.selectList("scheduleViewByUserId", mem_id);
+            return scheduleList;
+        } finally {
+            sqlSession.close();
+        }
+    }
+
 }

@@ -64,9 +64,9 @@
     </insert>
     
     <insert id="scheduleAdd" parameterType="com.sm.model.MemberDTO">
-        INSERT INTO tb_schedule (SCHE_SEQ, MEM_ID, SCHE_NAME, SCHE_CONTENT, STARTED_AT, ENDED_AT, SCHE_TYPE, SCHE_COLOR, DAILY_SEQ)
-        VALUES (TB_SCHEDULE_SEQ.NEXTVAL, #{mem_id}, #{sche_name}, #{sche_content}, #{started_at}, #{ended_at}, #{sche_type}, #{sche_color}, #{daily_seq})
-    </insert>
+    INSERT INTO tb_schedule (mem_id, sche_name, sche_content, started_at, ended_at, sche_type, sche_color, daily_seq)
+    VALUES (#{mem_id}, #{sche_name}, #{sche_content}, #{started_at}, #{ended_at}, #{sche_type}, #{sche_color}, #{daily_seq})
+	</insert>
     
     <select id="analyze" parameterType="com.sm.model.MemberDTO"
 		resultType="com.sm.model.MemberDTO">
@@ -75,15 +75,25 @@
 		WHERE A.MEM_ID = #{mem_id} AND A.MEM_ID = B.MEM_ID
 	</select>
 	
-	<select id="scheduleView" resultType="com.sm.model.MemberDTO">
+	<select id="scheduleView" parameterType="string" resultType="com.sm.model.MemberDTO">
     SELECT SCHE_SEQ, MEM_ID, SCHE_NAME, SCHE_CONTENT, STARTED_AT, ENDED_AT, SCHE_TYPE, SCHE_COLOR, DAILY_SEQ
     FROM tb_schedule
+    WHERE MEM_ID = #{mem_id}
     ORDER BY STARTED_AT DESC
 	</select>
 	
-	<delete id="deleteSchedule" parameterType="int">
-    DELETE FROM tb_schedule
-    WHERE sche_seq = #{sche_seq}
+	<select id="selectUserSchedules" parameterType="string" resultType="com.sm.model.MemberDTO">
+    SELECT * FROM tb_schedule WHERE mem_id = #{mem_id} ORDER BY started_at DESC
+</select>	
+	
+	<select id="checkScheduleOwner" parameterType="int" resultType="string">
+        SELECT mem_id FROM tb_schedule WHERE sche_seq = #{sche_seq}
+    </select>
+    
+    <!-- 스케줄 삭제 -->
+    <delete id="deleteSchedule" parameterType="map">
+    DELETE FROM tb_schedule 
+    WHERE sche_seq = #{sche_seq} AND mem_id = #{mem_id}
 	</delete>
 	
 	<select id="selectUserDetails" resultType="com.sm.model.MemberDTO">
@@ -91,5 +101,11 @@
     FROM TB_ATITUDE
     WHERE mem_id = #{mem_id}
 	</select>
-
+	
+	<select id="scheduleViewByUserId" parameterType="string" resultType="com.sm.model.MemberDTO">
+    SELECT * FROM tb_schedule WHERE mem_id = #{mem_id}
+	</select>
+	
+	
+	
 </mapper>

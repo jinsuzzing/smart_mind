@@ -13,6 +13,7 @@
     <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css' rel='stylesheet' />
 </head>
 <body>
+	<div id="userId" data-user-id="<%= session.getAttribute("userId") %>"></div>
     <nav>
 		<c:if test="${result == null}">
 			<button onclick='location.href="login.jsp";' class="login">로그인</button>
@@ -72,5 +73,9 @@
         </table>
     </div>
     <script src="assets/js/schedule.js"></script>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	<script>
+    var mem_id = '<c:out value="${sessionScope.result.mem_id}"/>';
+	</script>
 </body>
 </html>

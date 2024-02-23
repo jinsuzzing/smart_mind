@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     buildCalendar(new Date().getFullYear(), new Date().getMonth());
     fetchScheduleAndDisplay();
@@ -46,14 +47,10 @@ function fetchScheduleAndDisplay() {
     .catch(error => console.error('Error fetching schedule:', error));
 }
 
-function appendScheduleToCell(cell, content, sche_seq) {
-    const scheduleDiv = document.createElement("div");
-    scheduleDiv.textContent = content;
-    const deleteBtn = createDeleteButton(sche_seq, cell, scheduleDiv);
-    scheduleDiv.appendChild(deleteBtn);
-    cell.appendChild(scheduleDiv);
-}
+var userId = document.getElementById('userId').dataset.userId;
 
+
+// 스케줄 삭제 버튼을 생성하고 이벤트 리스너를 추가하는 함수
 function createDeleteButton(sche_seq, cell, scheduleDiv) {
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "X";
@@ -61,19 +58,23 @@ function createDeleteButton(sche_seq, cell, scheduleDiv) {
     deleteBtn.onclick = function(event) {
         event.stopPropagation();
         if (confirm("정말 삭제하시겠습니까?")) {
-            deleteSchedule(sche_seq, cell, scheduleDiv);
+            deleteSchedule(sche_seq, userId, cell, scheduleDiv);
         }
     };
     return deleteBtn;
 }
 
-function deleteSchedule(sche_seq, cell, scheduleDiv) {
-    fetch(`deleteSchedule?sche_seq=${sche_seq}`, { method: 'POST' }) // 메서드 변경 가능
+// 스케줄 삭제 요청을 보내는 함수
+function deleteSchedule(sche_seq, userId, cell, scheduleDiv) {
+    fetch(`deleteSchedule?sche_seq=${sche_seq}&mem_id=${userId}`, {
+        method: 'POST', // 혹은 'GET', 서버 구현에 따라 달라질 수 있습니다.
+    })
     .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         cell.removeChild(scheduleDiv); // UI에서 스케줄 항목 삭제
     })
     .catch(error => console.error('Error:', error));
+
 }
 
 function convertDateFormat(dateStr) {
@@ -92,14 +93,21 @@ function addSchedule(selectedDate, scheduleContent) {
     fetch('scheduleAdd', {
         method: 'POST',
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        body: `schedule=${encodeURIComponent(scheduleContent)}&selectedDate=${encodeURIComponent(selectedDate)}`
+        body: `schedule=${encodeURIComponent(scheduleContent)}&selectedDate=${encodeURIComponent(selectedDate)}&mem_id=${encodeURIComponent(mem_id)}`
     })
     .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.text();
-    })
-    .then(() => {
-        location.reload(); // 페이지 새로고침으로 달력 업데이트
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        // 서버로부터의 응답 처리가 성공적으로 완료되면 페이지를 새로고침합니다.
+        window.location.reload(); // 이 부분이 페이지를 새로고침하는 코드입니다.
     })
     .catch(error => console.error('Error:', error));
+}
+function appendScheduleToCell(cell, content, sche_seq) {
+    const scheduleDiv = document.createElement("div");
+    scheduleDiv.textContent = content;
+    const deleteBtn = createDeleteButton(sche_seq, cell, scheduleDiv);
+    scheduleDiv.appendChild(deleteBtn);
+    cell.appendChild(scheduleDiv);
 }
