@@ -163,5 +163,13 @@ public class DAO {
             }
         }
     }
-
+    public MemberDTO selectUserDetails(String mem_id) {
+        SqlSession sqlSession = factory.openSession();
+        try {
+            MemberDTO userDetails = sqlSession.selectOne("selectUserDetails", mem_id);
+            return userDetails;
+        } finally {
+            sqlSession.close();
+        }
+    }
 }

@@ -1,3 +1,5 @@
+<%@ page import="com.sm.model.MemberDTO" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -21,7 +23,7 @@
 			<button onclick='location.href="login.jsp";' class="login">로그인</button>
 		</c:if>
 		<c:if test="${result != null}">
-			<span class="welcome">${mem_id}님 환영합니다~</span>
+			<span class="welcome">${result.mem_name}님 환영합니다~</span>
 			<button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
 			<button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
 		</c:if>
@@ -83,7 +85,7 @@
 					<tr>
 						<td>1번 문제</td>
 						<c:if test="${test.test_corr=='1'}">
-							<th>정답입니다!!</th>
+							<th>정답입니다.</th>
 						</c:if>
 						<c:if test="${test.test_corr=='0'}">
 							<th>오답입니다.</th>
@@ -140,7 +142,7 @@
             labels : [ '1', '2', '3', '4', '5', '6' ], // X축 라벨
             datasets : [ {
                label : '# of Votes', // 데이터셋의 라벨
-               data : [ 50, 90, 75, 70, 40, 10 ], // Y축 데이터
+               data : [ 100, 95, 80, 100, 50, 50 ], // Y축 데이터
                backgroundColor : [ 'rgba(255, 99, 132, 0.2)', // 데이터 포인트의 배경 색상
                ],
                borderColor : [ '#D2003F', // 꺽은선의 색상
@@ -173,15 +175,22 @@
       });
    </script>
 	<script type="text/javascript">
-   
+	
+	<% MemberDTO analyze = (MemberDTO) request.getAttribute("analyze"); %>
+	var watchTime = <%= analyze.getWatch_time() %>;
+	var sleepTime = <%= analyze.getSleep() %>;
+	var leaveTime = <%= analyze.getLeave() %>;
+	var poseTime = <%= analyze.getPose() %>;
+	const focusedTime = watchTime - (sleepTime + leaveTime + poseTime);
+	const NotFocusedTime = sleepTime + leaveTime + poseTime
       const ctx2 = document.getElementById('mySecondChart').getContext('2d');
       const mySecondChart = new Chart(ctx2, {
          type : 'pie', // 차트의 타입을 'pie'로 설정
          data : {
-            labels : ['집중' ,'안집중' ],
+            labels : ['집중한시간' ,'집중안한시간' ],
             datasets : [ {
                label : 'Your Label Here',
-               data : [ ${watch_time}, ${sleep} ], // 데이터
+               data: [focusedTime, NotFocusedTime], // 데이터
                backgroundColor : [ 'rgb(255,84,133)', // 집중한 시간
                'rgb(230,230,230)', // (집중 못한 시간)
                ],
