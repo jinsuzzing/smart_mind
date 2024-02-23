@@ -12,26 +12,28 @@
     margin-left: 30px;
     background-color: #D2003F;
     display: flex;
-    justify-content: flex-end;
-    padding: 20px;	
+    padding: 20px;    
+    justify-content: flex-start;
     align-items: center;
 }
-      
-/* 메뉴 항목 스타일 */
-.menu-item {
-display: flex;
-color: #FFFFFF;
-font-weight: bold;
-font-size: x-large;
-margin-left: 200px;
-position: relative;
-margin-right: 20px;
-cursor: pointer; /* 마우스 오버 시 커서 변경 */      
+
+.move {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 100px; /* 로고 우측으로 20px 떨어지도록 조정 */
 }
-      
-/* 메뉴 항목 호버 효과 */
-.menu-item:hover {
-text-decoration: underline;
+
+.menu-item {
+    display: flex;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: x-large;
+    cursor: pointer;
+    margin-left: 230px;
+}
+.menu-bar a:nth-child(2) {
+   margin-left: 550px;
 }
       
 /* 메뉴 로고 스타일 */
@@ -39,6 +41,8 @@ text-decoration: underline;
 position: absolute;
 left: 20px;
 top: 45px;
+width: 500px;
+height: 100px;
 }
       
 a{
