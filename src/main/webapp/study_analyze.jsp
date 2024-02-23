@@ -66,12 +66,7 @@
 		<!-- 차트를 그릴 캔버스 요소추가 -->
 		<%-- <canvas id="myChart"></canvas> --%>
 		<canvas id="mySecondChart"></canvas>
-
-	</div>
-	<br>
-	<br>
-	<br>
-	<h2 class="lecture-title">● 테스트 문제 채점결과</h2>
+		<h2 class="lecture-title">● 테스트 문제 채점결과</h2>
 	<div id="board-list">
 		<div class="container">
 			<table class="board-table">
@@ -113,6 +108,12 @@
 		</div>
 	</div>
 
+	</div>
+	<br>
+	<br>
+	<br>
+	
+
 	<script>
       //AI의 집중도 상승 꿀팁 랜덤값으로 출력
       document
@@ -133,7 +134,7 @@
                      document.getElementById('randomComment').textContent = randomComment;
                   });
    </script>
-<!-- 	<script>
+	<script>
       // 차트 출력 스크립트
       var ctx = document.getElementById('myChart').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -173,7 +174,7 @@
             }
          }
       });
-   </script> -->
+   </script>
 	<script type="text/javascript">
 	
 	<% MemberDTO analyze = (MemberDTO) request.getAttribute("analyze"); %>
