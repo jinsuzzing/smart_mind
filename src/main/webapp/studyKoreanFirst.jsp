@@ -41,12 +41,12 @@
     </div>
     
     <div class="title">
-    <h1>강의제목 : 쉽게 배우는 영어</h1>
+    <h1>강의제목 : 쉽게 배우는 국어</h1>
     <button>재생목록에 담기</button>
     </div>
 
     <div class="subtitle">
-        <span>민수 쌤과 쉽고 재밋게 배우는 중등영어!!</span>
+        <span>민수 쌤과 쉽고 재밌게 배우는 중등국어!!</span>
         <span class="lessen">레슨수 : 18개</span>
     </div>
 
@@ -62,7 +62,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1. 영어와 친해지기</td>
+                    <td>1. 국어와 친해지기</td>
                     <td>4개</td>
                     <td>24.02.13</td>
                     <td>00:48:27</td>
@@ -70,20 +70,20 @@
                 <tr>
                     <td colspan="2" class="setitle">
                         <a href="studyKoreanFirstView.jsp" style="display: block; color: inherit; text-decoration: none; height: 100%; width: 100%;">
-                            01. 영어의 역사
+                            01. 국어의 역사
                         </a>
                     </td>
                     <td>24.02.13</td>
                     <td>01:10:43</td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="setitle">02. 기초 영어 문법을 알아보자</td>
+                    <td colspan="2" class="setitle">02. 기초 국어 문법을 알아보자</td>
                     <td>24.02.13</td>
                     <td>01:10:43</td>
                 </tr>
                 <!-- 다른 강의들에 대한 행 추가 -->
                 <tr>
-                    <td>2. 영어와 다가가기</td>
+                    <td>2. 국어에 다가가기</td>
                     <td>3개</td>
                     <td>업로드 날짜</td>
                     <td>재생시간</td>

@@ -64,7 +64,7 @@
 	<div class="chart-container">
 
 		<!-- 차트를 그릴 캔버스 요소추가 -->
-		<canvas id="myChart"></canvas>
+		<%-- <canvas id="myChart"></canvas> --%>
 		<canvas id="mySecondChart"></canvas>
 
 	</div>
@@ -133,7 +133,7 @@
                      document.getElementById('randomComment').textContent = randomComment;
                   });
    </script>
-	<script>
+<!-- 	<script>
       // 차트 출력 스크립트
       var ctx = document.getElementById('myChart').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -173,7 +173,7 @@
             }
          }
       });
-   </script>
+   </script> -->
 	<script type="text/javascript">
 	
 	<% MemberDTO analyze = (MemberDTO) request.getAttribute("analyze"); %>
