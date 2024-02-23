@@ -55,8 +55,8 @@
 			</div>
 			<!-- 버튼 추가 -->
 			<div class="buttons-container">
-				<button class="custom-button">자세 교정 시작</button>
-				<button class="custom-button">졸음 탐지 시작</button>
+				<a href="studyModeling.jsp" class="custom-button">자세 교정 시작</a>
+				<a href="studyModeling.jsp" class="custom-button">졸음 탐지 시작</a>
 			</div>
 		</div>
 	</div>
