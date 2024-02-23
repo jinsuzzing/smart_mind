@@ -59,16 +59,12 @@
 		</div>
 
 	</div>
-	<br>
-	<br>
-	<br>
-	<h2 class="lecture-title">● 분석데이터 상세보기</h2>
-	<h2 class="lecture-title" style="margin-left : 1400px;">● 테스트 문제 채점결과</h2>
-	<br>
-	<br>
-	<br>
+	<div class = "lecture">
+		<h2 class="lecture-title">● 분석데이터 상세보기</h2>
+		<h2 class="lecture-title" >● 테스트 문제 채점결과</h2>
+	</div>
 	<div class="chart-container">
-
+		
 		<!-- 차트를 그릴 캔버스 요소추가 -->
 		<%-- <canvas id="myChart"></canvas> --%>
 		<canvas id="mySecondChart"></canvas>
