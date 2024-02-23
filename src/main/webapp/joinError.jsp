@@ -39,7 +39,7 @@
 	<br>
 	<br>
 	<br>
-	<img src="./images/smart_image/error.PNG" class="check">
+	<img src="images/smart_image/error.png" class="check">
 	<br>
 	<br>
 	<br>

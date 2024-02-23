@@ -15,7 +15,7 @@
 <body>
     <div class="menu-bar">
         <a href="studyKorean.jsp">
-            <img src="images/smart_image/logo_background" class="menu-logo">
+            <img src="images/smart_image/logo_background.png" class="menu-logo">
         </a>
         <a href="studyKorean.jsp" class="menu-item">공부하러가기</a>
         <a href="schedule.jsp" class="menu-item">스케줄관리</a>
@@ -28,7 +28,7 @@
     <br>
     <br>
     <br>
-    <img src="images/smart_image.error.PNG" class="check">
+    <img src="images/smart_image/error.PNG" class="check">
     <br>
     <br>
     <br>
