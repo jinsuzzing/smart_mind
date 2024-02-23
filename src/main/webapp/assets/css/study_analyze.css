@@ -26,7 +26,12 @@
    margin-bottom: 50px;
    justify-content: left;
    margin-left: 250px;
+   min-height: 50px !important; /* 최소 높이 설정 */
+   padding-top: 10px !important; /* 상단 패딩 */
+   padding-bottom: 10px !important; /* 하단 패딩 */
 }
+
+
 
 .lecture-item {
    width: 1600px;
@@ -53,18 +58,22 @@
     line-height: 1.2; /* 텍스트 라인 간의 간격 조정 */
     display: block; /* 각 텍스트를 블록 요소로 처리 */
     color: rgb(97, 97, 97);
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .highlight{
-   font-size: 27px;
+   font-size: 35px;
    color: #D2003F;
 }
 
 .blacktext{
    font-size: 27px;
    color: black;
-   
+ }
+.black{
+	font-size:27px;
+	color:black;
+
 }
 .ai_comment{
    padding: 5px ; /* 내부 여백을 줄임 */
@@ -72,8 +81,8 @@
     text-align: center;
     line-height: 1.2; /* 텍스트 라인 간의 간격 조정 */
     display: block; /* 각 텍스트를 블록 요소로 처리 */
-   font-size: 30px;
-   color: rgb(13, 11, 87);
+   font-size: 40px;
+   color: rgb(10, 0, 200);
    
 }
 .chart-container {
@@ -82,14 +91,9 @@
 }
 
 
-#myChart {
-   margin-left: 250px ;
-    width: 500px !important; 
-    height: 500px !important;
-    display: block;
-}
 
 #mySecondChart{
+	margin-left: 150px;
     width: 500px !important; 
     height: 500px !important;
     display: block;
@@ -97,7 +101,7 @@
 }
 
 table {
-   margin-left: 250px ;
+   margin-left: 230px ;
     border-collapse: collapse;
 }
 

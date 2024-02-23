@@ -46,10 +46,15 @@
 			<span class="lecture-text"> <span class="highlight">${analyze.mem_name}</span>
 				께서는 오늘 <span class="highlight">${analyze.watch_time}</span>분
 				공부하셨습니다.
-			</span> <br> <span class="lecture-text">오늘 학습시간중 졸은시간은<span
-				class="highlight">${analyze.sleep}</span>분, 이탈 시간은 <span
-				class="highlight">${analyze.leave}</span>분, 바르지 않은 자세는 <span
-				class="highlight">${analyze.pose}</span>분 입니다.
+			</span> 
+			<br> 
+			<span class="lecture-text">오늘 학습시간중 
+			<span class="black">졸은시간은</span>
+			<span class="highlight">${analyze.sleep}</span>분, 
+			
+			<span class="highlight">${analyze.leave}</span>분, 
+			<span class="black">바르지 않은 자세는</span>
+			<span class="highlight">${analyze.pose}</span>분 입니다.
 			</span> <br> <span class="ai_comment" id="randomComment"></span>
 		</div>
 
@@ -58,6 +63,7 @@
 	<br>
 	<br>
 	<h2 class="lecture-title">● 분석데이터 상세보기</h2>
+	<h2 class="lecture-title" style="margin-left : 1400px;">● 테스트 문제 채점결과</h2>
 	<br>
 	<br>
 	<br>
@@ -66,7 +72,7 @@
 		<!-- 차트를 그릴 캔버스 요소추가 -->
 		<%-- <canvas id="myChart"></canvas> --%>
 		<canvas id="mySecondChart"></canvas>
-		<h2 class="lecture-title">● 테스트 문제 채점결과</h2>
+
 	<div id="board-list">
 		<div class="container">
 			<table class="board-table">

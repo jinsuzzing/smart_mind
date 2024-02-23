@@ -39,7 +39,7 @@
 	<div class="content-container">
 		<div class="video-container">
 			<video id="myVideo" controls>
-				<source src="./video/KakaoTalk_20240213_110856205.mp4"
+				<source src="./video/KakaoTalk_20240223_102217920.mp4"
 					type="video/mp4">
 			</video>
 		</div>
