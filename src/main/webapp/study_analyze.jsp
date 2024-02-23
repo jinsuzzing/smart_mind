@@ -41,7 +41,7 @@
 	<br>
 	<div class="lecture-container">
 
-		<h2 class="lecture-title">● 오늘의 학습분석 데이터</h2>
+		<h2 id = "t" class="lecture-title">● 오늘의 학습분석 데이터</h2>
 		<div class="lecture-item">
 			<span class="lecture-text"> <span class="highlight">${analyze.mem_name}</span>
 				께서는 오늘 <span class="highlight">${analyze.watch_time}</span>분
