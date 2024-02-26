@@ -21,7 +21,7 @@
 			<button onclick='location.href="login.jsp";' class="login">로그인</button>
 		</c:if>
 		<c:if test="${result != null}">
-			<span class="welcome">${mem_id}님 환영합니다~</span>
+			<span class="welcome">${result.mem_name}님 환영합니다~</span>
 			<button onclick='location.href="update.jsp";' class="update">개인정보수정</button>
 			<button onclick='location.href="LogoutService";' class="logout">로그아웃</button>
 		</c:if>
@@ -47,7 +47,7 @@
 	<br>
 	<br>
 	<br>
-	<span class="success">OOO님! 회원가입이 완료 되었습니다.</span>
+	<span class="success">회원가입이 완료 되었습니다.</span>
 	<br>
 	<br>
 	<form action="studyKorean.jsp">
