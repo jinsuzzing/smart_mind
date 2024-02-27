@@ -135,9 +135,9 @@
   </tr>
   <tr>
     <td align="center"><b>PM , Back-end, 프로젝트 총괄</b></td>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Backend</b></td>
+    <td align="center"><b>Front-end , Back-end, UXUI</b></td>
+    <td align="center"><b>Front-end, UXUI, 시각화</b></td>
+    <td align="center"><b>DB설계 및 구축, PM, 크롤링, DataModeling</b></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
@@ -148,11 +148,6 @@
 </table>
 
 ## 🤾‍♂️ 트러블슈팅
-개념: 문제 해결을 위해 문제의 원인을 논리적이고 체계적으로 찾는 일이며 제품이나 프로세스의 운영을 재개
-프로젝트 진행하는 동안 발생했던 이슈 중 가장 기억에 남았던 문제와 해결 프로세스 나열(2~5가지 정도)
-  
-* 문제1<br>
- 문제점 설명 및 해결방안
- 
-* 문제2<br>
- 문제점 설명 및 해결방안
+![28](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/158141455/1f2f5af1-20fa-41ae-b987-0d0247e20406)
+![29](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/158141455/a669bfaa-dae3-4745-a338-c3781bf1b6f1)
+
