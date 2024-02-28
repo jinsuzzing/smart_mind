@@ -43,7 +43,7 @@
                 <source src="./video/자세.mp4" type="video/mp4">
             </video>
             <video id="myVideo" controls>
-                <source src="./video/sleep.mp4" type="video/mp4"> 
+                <source src="./video/졸음.mp4" type="video/mp4"> 
             </video>
         </div>
 
