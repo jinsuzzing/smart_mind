@@ -26,6 +26,8 @@
     <tr>
         <td>사용언어</td>
         <td>
+            ![image](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/153692372/626487c7-a81a-40b6-bb17-582e7f9cf3ca)
+
             <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"/>
             <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/>
             <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"/>
