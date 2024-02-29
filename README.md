@@ -71,15 +71,14 @@
 </table>
 
 
-<br>
 
 ## ⚙ 시스템 아키텍처(구조)
-![image](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/153692372/54b5b32a-58c4-4725-a2d4-343050a1ade5)
-   
+![image](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/153692372/123ec8a3-8943-4153-867a-7d61c1697a81)
 <br>
 
 ## 📌 서비스 흐름도
-![image](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/153692372/6645a148-8e71-4b72-9d5f-5c3c80559ccf)
+![image](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/153692372/505614fa-d915-42d1-80e0-36fb345342ce)
+
 
 <br>
 
@@ -152,4 +151,5 @@
 ## 🤾‍♂️ 트러블슈팅
 ![28](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/158141455/1f2f5af1-20fa-41ae-b987-0d0247e20406)
 ![29](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/158141455/a669bfaa-dae3-4745-a338-c3781bf1b6f1)
+![image](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/153692372/dfcb0137-4451-4d9e-93b0-a92de1683a18)
 
