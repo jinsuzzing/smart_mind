@@ -74,6 +74,7 @@
 <br>
 
 ## ⚙ 시스템 아키텍처(구조)
+![image](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/153692372/54b5b32a-58c4-4725-a2d4-343050a1ade5)
    
 <br>
 
