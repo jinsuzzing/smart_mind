@@ -74,11 +74,12 @@
 <br>
 
 ## ⚙ 시스템 아키텍처(구조)
-![프로젝트 최종 발표(Smart Mind) (2)](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/158141455/947856ec-5a97-435e-8d6e-8bc08cf6b448)
+   
 <br>
 
 ## 📌 서비스 흐름도
-![프로젝트 최종 발표(Smart Mind) (3)](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/158141455/53755827-5d99-4c73-8c11-fc20667e04db)
+![image](https://github.com/2024-SMHRD-IS-CLOUD-2/smart_mind/assets/153692372/6645a148-8e71-4b72-9d5f-5c3c80559ccf)
+
 <br>
 
 ## 📌 ER다이어그램
